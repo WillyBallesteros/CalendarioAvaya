@@ -1,0 +1,12 @@
+﻿[
+    { "id": "1", "name": "Blog", "icon": "blog.png" },
+    { "id": "2", "name": "Content Syndication", "icon": "case.png" },
+    { "id": "3", "name": "Email", "icon": "brochure.png" },
+    { "id": "4", "name": "Live Event", "icon": "event.png" },
+    { "id": "5", "name": "Other", "icon": "other.png" },
+    { "id": "6", "name": "Press Release (PR)", "icon": "whitepaper.png" },
+    { "id": "7", "name": "Paid Media", "icon": "ondemand.png" },
+    { "id": "8", "name": "Social (Organic)", "icon": "interactive.png" },
+    { "id": "9", "name": "Social (Paid)", "icon": "info.png" }
+]
+

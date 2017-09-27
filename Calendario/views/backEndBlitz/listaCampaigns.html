@@ -1,0 +1,178 @@
+﻿<!-- Content Header (Page header) -->
+<div id="listaCampaignsController">
+    <section class="content-header">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3 id="titleStatus">
+                    BLITZ CALENDAR - LIST
+                </h3>
+            </div>
+            <div class="col-sm-6">
+                <button type="button" ng-click="addCampaign()" class="btn btn-danger" style="max-width: 250px; float: right; margin-top: 15px; margin-right: 5px;">Add new blitz</button>
+            </div>
+        </div>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="listaEventosDt" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th width="5%">ID</th>
+                                    <th width="10%">Actions</th>
+                                    <th width="20%">Campaign Name</th>
+                                    <th width="10%">Date</th>
+                                    <th width="10%">Partner</th>
+                                    <th width="10%">Theater</th>
+                                    <th width="10%">Status</th>
+                                    <th width="10%">FMM</th>
+                                    <th width="10%">State</th>
+                                    <th width="10%">SDFC Name</th>
+                                    <th width="10%">SDFC Link</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+                                <!--Content table-->
+                                <!--end Content table-->
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th><button style="width: auto;" class="btn btn-default" ng-click="toExcel()"><i class="fa fa-file-excel-o" aria-hidden="true" style="color:#fff;"></i>&nbsp;Excel</button></th>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div><!-- /.box-body -->
+                </div><!-- /.box -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </section><!-- /.content -->
+    
+    <div id="BlitzModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="text-transform: uppercase;" id="formTitle"></h4>
+                </div>
+                <div class="modal-body">
+                    <form ng-submit="submitBlitz()" id="blitzForm" name="blitzForm">
+
+                        <div class="form-group" id="CampBlitzNameMsg">
+                            <label for="">CAMPAIGN NAME   <span style="color:#Da211C">(Required)</span></label>
+                            <input type="text" class="form-control" id="CampBlitzName" name="CampBlitzName" ng-model="frm.CampBlitzName" placeholder="CAMPAIGN NAME">
+                        </div>
+                        <div class="form-group" id="CampBlitzDateStartMsg">
+                            <label for="">TACTIC START DATE    <span style="color:#Da211C">(Required)</span></label>
+                            <div class="input-group date" id="CampBlitzDateStartD">
+                                <input type='text' class="form-control" id="CampBlitzDateStart" ng-model="frm.CampBlitzDateStart" name="CampBlitzDateStart" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="CampBlitzPartnerNameMsg">
+                            <label for="">PARTNER</label>
+                            <input type="text" class="form-control" id="CampBlitzPartnerName" name="CampBlitzPartnerName" ng-model="frm.CampBlitzPartnerName" placeholder="PARTNER NAME">
+                        </div>
+
+                        <div class="form-group" id="CampBlitzTheaterMsg">
+                            <label for="">THEATER   <span style="color:#Da211C">(Required)</span></label>
+                            <select class="form-control" id="CampBlitzTheater" name="CampBlitzTheater" ng-model="frm.CampBlitzTheater" ng-change="changeTheater()">
+                                <option ng-repeat="th in theaterList" value="{{th.name}}">{{th.name}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="CampBlitzStatusMsg">
+                            <label for="">STATUS   <span style="color:#Da211C">(Required)</span></label>
+                            <select type="text" class="form-control" id="CampBlitzStatus" name="CampBlitzStatus" ng-model="frm.CampBlitzStatus">
+                                <option value="Pending">Pending</option>
+                                <option value="Working">Working</option>
+                                <option value="Ready to go">Ready to go</option>
+                                <option value="Completed">Completed</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group" id="CampBlitzAgencyMsg">
+                            <label for="">AGENCY   <span style="color:#Da211C">(Required)</span></label>
+                            <select type="text" class="form-control" id="CampBlitzAgency" name="CampBlitzAgency" ng-model="frm.CampBlitzAgency">
+                                <option value="">All</option>
+                                <option value="Creative Services">Creative Services</option>
+                                <option value="External Agency">External Agency</option>
+                                <option value="CS & External Agency">CS & External Agency</option>
+                                <option value="Televerde">Televerde</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group" id="CampBlitzFmmMsg">
+                            <label for="">FMM</label>
+                            <input type="text" class="form-control" id="CampBlitzFmm" name="CampBlitzFmm" ng-model="frm.CampBlitzFmm" placeholder="FMM">
+                        </div>
+                        <div class="form-group" id="CampBlitzStateMsg">
+                            <label for="">STATE</label>
+                            <input type="text" class="form-control" id="CampBlitzState" name="CampBlitzState" ng-model="frm.CampBlitzState" placeholder="STATE">
+                        </div>
+                        <div class="form-group" id="CampBlitzSFDCNameMsg">
+                            <label for="">SFDC NAME</label>
+                            <input type="text" class="form-control" id="CampBlitzSFDCName" name="CampBlitzSFDCName" ng-model="frm.CampBlitzSFDCName" placeholder="SFDC NAME">
+                        </div>
+                        <div class="form-group" id="CampBlitzSFDCLinkMsg">
+                            <label for="">SFDC LINK</label>
+                            <input type="text" class="form-control" id="CampBlitzSFDCLink" name="CampBlitzSFDCLink" ng-model="frm.CampBlitzSFDCLink" placeholder="SFDC LINK">
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <button type="submit" id="createEvent" class="btn btn-danger" style="max-width: 250px;"></button>
+                                <br />
+
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default modal-btn-close" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">{{message.title}}</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-tactic">
+                        <strong>{{message.content}}</strong>&nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" style="max-width: 120px;" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+
+</div>

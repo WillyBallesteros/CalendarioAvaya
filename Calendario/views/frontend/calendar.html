@@ -1,0 +1,1045 @@
+﻿<div class="row">
+	<div class="col-sm-3">
+		<a class="btn btn-danger" href="CalendarBlitz.html" target="_blank">Go to Blitz Calendar</a>
+		<a class="btn btn-danger" href="CalendarCampsBlitz.html" target="_blank">Go to Campaigns+Blitz Calendar</a>
+		<nav class="navbar navbar-default" role="navigation">
+			<!-- El logotipo y el icono que despliega el menú se agrupan
+				para mostrarlos mejor en los dispositivos móviles -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle glyphicon-filter" data-toggle="collapse"
+						data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Desplegar navegación</span>
+
+				</button>
+			</div>
+
+			<!-- Agrupar los enlaces de navegación, los formularios y cualquier
+				otro elemento que se pueda ocultar al minimizar la barra -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<div class="title">
+					<p>Search By:</p>
+				</div>
+				<div ng-submit="search()">
+					<div class=" form-group">
+						<label>Campaign Name</label>
+						<!--<input type="text" class="form-control customform" name="campaignName" id="campaignName" ng-model="campaignName"/>-->
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search..." name="campaignName" id="campaignName" ng-model="campaignName">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button" ng-click="search()">Go!</button>
+							</span>
+						</div>
+					</div>
+
+					<div class=" form-group">
+						<label>Theater</label>
+						<select class="form-control" id="theater" name="theater" ng-model="theater" ng-change="search()" style="margin-top: 15px;">
+							<option value="">All</option>
+							<option ng-repeat="t in theaterList" value="{{t.name}}">{{t.name}}</option>
+						</select>
+						
+					</div>
+					<div class=" form-group">
+						<label>Program</label>
+						<select class="form-control customform" name="programName" ng-model="programName" id="programName" ng-change="search()">
+							<option value="">All</option>
+							<option value="Contact Me Teleprospecting">Contact Me Teleprospecting</option>
+							<option value="Content Promotion">Content Promotion</option>
+							<option value="Demand Generation">Demand Generation</option>
+							<option value="Event">Event</option>
+							<option value="Live Webinar">Live Webinar</option>
+							<option value="Partner Teleprospecting">Partner Teleprospecting</option>
+							<option value="Physical Event">Physical Event</option>
+							<option value="Reputation">Reputation</option>
+							<option value="Sales Enablement">Sales Enablement</option>
+						</select>
+					</div>
+					<div class=" form-group">
+						<label>Tactic Stage</label>
+						<select class="form-control customform" name="tacticStage" id="tacticStage" ng-model="tacticStage" ng-change="search()">
+							<option value="">All</option>
+							<option value="Awareness">Awareness</option>
+							<option value="Research">Research</option>
+							<option value="Evaluation">Evaluation</option>
+						</select>
+					</div>
+					
+					<div class=" form-group">
+						<label>Languages</label><br/>
+						<select class="form-control" id="language" name="language" ng-model="language" style="margin-top: 15px;" ng-change="search()">
+							<option value="">All</option>
+							<option ng-repeat="lang in languages" value="{{lang.name}}">{{lang.name}}</option>
+						</select>
+					</div>
+					<div class=" form-group">
+						<label>Solution</label>
+						<select class="form-control" id="businessUnit" name="businessUnit" ng-model="businessUnit" ng-change="search()" style="margin-top: 15px;">
+							<option value="">All</option>
+							<option ng-repeat="bu in businessUnitList" value="{{bu.name}}">{{bu.name}}</option>
+						</select>
+						
+					</div>
+					<div class=" form-group">
+						<label>Business Segment</label>
+						<select class="form-control" id="businessSegment" name="businessSegment" ng-model="businessSegment" ng-change="search()" style="margin-top: 15px;">
+							<option value="">All</option>
+							<option ng-repeat="bus in businessSegmentList" value="{{bus.name}}">{{bus.name}}</option>
+						</select>
+  
+					</div>
+					<div class=" form-group">
+						<label>Vertical</label><br/>
+						<select class="form-control" id="vertical" name="vertical" ng-model="vertical" ng-change="search()" style="margin-top: 15px;">
+							<option value="">All</option>
+							<option ng-repeat="vert in verticals" value="{{vert.name}}">{{vert.name}}</option>
+						</select>
+					</div>
+					<div class=" form-group underline">
+						<label>Agency</label><br />
+						<select class="form-control" id="agencyInternal" name="agencyInternal" ng-model="agencyInternal" ng-change="search()" style="margin-top: 15px;">
+							<option value="">All</option>
+							<option value="Creative Services">Creative Services</option>
+							<option value="External Agency">External Agency</option>
+							<option value="CS & External Agency">CS & External Agency</option>
+							<option value="Televerde">Televerde</option>
+						</select>
+					</div>
+					<!--<button type="submit" class="btn btn-default">FILTER</button>-->
+					<!--<button type="button" class="btn btn-default" ng-click="showAll()">UNDO FILTER (SHOW ALL)</button>-->
+				</div>
+
+			</div>
+		</nav>
+		<!--<nav class="navbar navbar-default" role="navigation">
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<div class="title">
+						<p>Undo Filter</p>
+					</div>
+					<button type="button" class="btn btn-default" ng-click="showAll()">SHOW ALL</button>
+				</div>
+			</nav>-->
+	</div>
+	<div class="col-sm-9">
+		<div class="row calendar-type">
+			<div class="col-sm-12">
+				<div class="color-reference-blitz">
+					<div class="col-sm-2 color-region-blitz" ng-click="filterByTheatre('AI')">
+						<div class="circle-color-blitz" style="background-color:#ccc;">
+						</div>
+						<p ng-class="{selectedTheater: theater == 'AI'}">AI&nbsp;&nbsp;</p>
+						<p class="region-sep">|</p>
+					</div>
+					<div class="col-sm-2 color-region-blitz" ng-click="filterByTheatre('APAC')">
+						<div class="circle-color-blitz" style="background-color:#d0e9fc;">
+						</div>
+						<p ng-class="{selectedTheater: theater == 'APAC'}">APAC&nbsp;&nbsp;</p>
+						<p class="region-sep">|</p>
+					</div>
+					<div class="col-sm-2 color-region-blitz" ng-click="filterByTheatre('EMEA')">
+						<div class="circle-color-blitz" style="background-color:#FFDDAE;">
+						</div>
+						<p ng-class="{selectedTheater: theater == 'EMEA'}">EMEA&nbsp;&nbsp;</p>
+						<p class="region-sep">|</p>
+					</div>
+
+					<div class="col-sm-2 color-region-blitz" ng-click="filterByTheatre('US')">
+						<div class="circle-color-blitz" style="background-color:#FFD2F2;">
+						</div>
+						<p ng-class="{selectedTheater: theater == 'US'}">US&nbsp;&nbsp;</p>
+						<p class="region-sep">|</p>
+					</div>
+					<div class="col-sm-2 color-region-blitz" ng-click="filterByTheatre('')">
+						<div class="circle-color-blitz" style="background-color:#a5def7;">
+						</div>
+						<p ng-class="{selectedTheater: theater == 'All'}">All&nbsp;&nbsp;</p>
+
+					</div>
+
+
+
+
+
+					<!--<div class="color-region">
+				<div class="circle-color" style="background-color:#ccc;">
+				</div>
+				<p>AI</p>
+			</div>
+			<div class="color-region">
+				<div class="circle-color" style="background-color:#d0e9fc;">
+				</div>
+				<p>APAC</p>
+			</div>
+			<div class="color-region">
+				<div class="circle-color" style="background-color:#FFDDAE;">
+				</div>
+				<p>EMEA</p>
+			</div>
+
+			<div class="color-region">
+				<div class="circle-color" style="background-color:#FFD2F2;">
+				</div>
+				<p>US</p>
+			</div>-->
+				</div>
+				<div class="calendar-type-collect">
+					<div class="subtitle">Visualization Type:</div>
+																		  
+					<div class="calendar-type-btn" ng-click="changeToMontly()">
+						Monthly<br>
+						<img src="assetsFrontEnd/img/cal-01.png">
+					</div>
+					<div class="calendar-type-btn" ng-click="changeToWeekly()">
+						Weekly
+						<img src="assetsfrontend/img/cal-02.png">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-4 text-right hide-custom">
+				<div class="pre-month" ng-click="getEventsByMonthYear(navMonth.back)">{{ navMonth.back | cmdate:'MMM' }} - {{ navMonth.back | cmQ }}</div>
+			</div>
+			<div class="col-sm-4 text-center">
+				<form>
+					<select class="month" ng-change="getEventsByMonthYear()" ng-model="dateSelected" style="text-align: center; text-align-last: center;">
+						<option ng-repeat="month in navMonth.current" value="{{month.date | cmdate:'yyyy/MM/dd'}}" ng-selected="{{month.selected == true}}">{{month.date | cmdate:'MMM' }} - {{month.date | cmQ }}</option>
+					</select>
+				</form>
+			</div>
+			<div class="col-sm-4 text-left hide-custom">
+				<div class="post-month" ng-click="getEventsByMonthYear(navMonth.next)">{{ navMonth.next | cmdate:'MMM' }} - {{ navMonth.next | cmQ }}</div>
+			</div>
+		</div>
+		<div id="calendar" print-section>
+			<table class="calendar" cellpadding="0" cellspacing="0" border="0" id="monthlytablehdr">
+				<tr class="days">
+					<!--<td valign="top" class="sunday"></td>-->
+					<td valign="top" class="monday"></td>
+					<td valign="top" class="tuesday"></td>
+					<td valign="top" class="wednesday"></td>
+					<td valign="top" class="thursday"></td>
+					<td valign="top" class="friday"></td>
+					<!--<td valign="top" class="saturday"></td>-->
+				</tr>
+			</table>
+			<table class="calendar dates" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;" id="monthlytable">
+			   <tr>
+					<td ng-repeat="day in semana1" valign="top" ng-if="day.Weekend == 'NO'" ng-class="{ 'weekend' : day.Weekend == 'YES', 'other-month' : day.ActualMonth == 'NO' }">
+						<div class="date">{{day.Day}}</div>
+						<div ng-show="day.Events.length < 3">
+							<div ng-repeat="ev in day.Events" class="tactic" ng-click="showDetails(ev)" ng-class="ev.theater">
+								<div class="tactic-icon">
+									<img ng-src="images/{{ev.programInitials}}" alt="{{ev.programInitials}}" />
+								</div>
+								<div class="tactic-name" data-toggle="tooltip" data-placement="top" title="{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+						</div>
+						<div ng-show="day.Events.length >= 3">
+							<div ng-repeat="ev in day.Events | limitTo:2" class="tactic" ng-click="showDetails(ev)" ng-class="ev.theater">
+								<div class="tactic-icon">
+									<img ng-src="images/{{ev.programInitials}}" alt="{{ev.programInitials}}" />
+								</div>
+								<div class="tactic-name" data-toggle="tooltip" data-placement="top" title="{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+							<div class="more" ng-click="showEvents(day.Events)"></div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td ng-repeat="day in semana2" valign="top" ng-if="day.Weekend == 'NO'" ng-class="{ 'weekend' : day.Weekend == 'YES', 'other-month' : day.ActualMonth == 'NO' }">
+						<div class="date">{{day.Day}}</div>
+						<div ng-show="day.Events.length < 3">
+							<div ng-repeat="ev in day.Events" class="tactic" ng-click="showDetails(ev)" ng-class="ev.theater">
+								<div class="tactic-icon">
+									<img ng-src="images/{{ev.programInitials}}" alt="{{ev.programInitials}}" />
+								</div>
+								<div class="tactic-name" data-toggle="tooltip" data-placement="top" title="{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+						</div>
+						<div ng-show="day.Events.length >= 3">
+							<div ng-repeat="ev in day.Events | limitTo:2" class="tactic" ng-click="showDetails(ev)" ng-class="ev.theater">
+								<div class="tactic-icon">
+									<img ng-src="images/{{ev.programInitials}}" alt="{{ev.programInitials}}" />
+								</div>
+								<div class="tactic-name" data-toggle="tooltip" data-placement="top" title="{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+							<div class="more" ng-click="showEvents(day.Events)"></div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td ng-repeat="day in semana3" valign="top" ng-if="day.Weekend == 'NO'" ng-class="{ 'weekend' : day.Weekend == 'YES', 'other-month' : day.ActualMonth == 'NO' }">
+						<div class="date">{{day.Day}}</div>
+						<div ng-show="day.Events.length < 3">
+							<div ng-repeat="ev in day.Events" class="tactic" ng-click="showDetails(ev)" ng-class="ev.theater">
+								<div class="tactic-icon">
+									<img ng-src="images/{{ev.programInitials}}" alt="{{ev.programInitials}}" />
+								</div>
+								<div class="tactic-name" data-toggle="tooltip" data-placement="top" title="{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+						</div>
+						<div ng-show="day.Events.length >= 3">
+							<div ng-repeat="ev in day.Events | limitTo:2" class="tactic" ng-click="showDetails(ev)" ng-class="ev.theater">
+								<div class="tactic-icon">
+									<img ng-src="images/{{ev.programInitials}}" alt="{{ev.programInitials}}" />
+								</div>
+								<div class="tactic-name" data-toggle="tooltip" data-placement="top" title="{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+							<div class="more" ng-click="showEvents(day.Events)"></div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td ng-repeat="day in semana4" valign="top" ng-if="day.Weekend == 'NO'" ng-class="{ 'weekend' : day.Weekend == 'YES', 'other-month' : day.ActualMonth == 'NO' }">
+						<div class="date">{{day.Day}}</div>
+						<div ng-show="day.Events.length < 3">
+	<!--                        <div ng-repeat="ev in day.Events" class="tactic" ng-click="showDetails(ev)" ng-style="ev.businessSegment === 'All' && {'background-color': '#cccccc'} || ev.businessSegment === 'Enterprise' && {'background-color': '#b4fcee'} || ev.businessSegment === 'Midmarket' && {'background-color': '#d0e9fc'} || ev.businessSegment === 'SMB' && {'background-color': '#ffe9d4'}">-->
+							<div ng-repeat="ev in day.Events" class="tactic" ng-click="showDetails(ev)" ng-class="ev.theater">
+
+									<div class=" tactic-icon">
+								<img ng-src="images/{{ev.programInitials}}" alt="{{ev.programInitials}}" />
+							</div>
+									<div class="tactic-name" data-toggle="tooltip" data-placement="top" title="{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}">
+										{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+									</div>
+								</div>
+						</div>
+						<div ng-show="day.Events.length >= 3">
+							<div ng-repeat="ev in day.Events | limitTo:2" class="tactic" ng-click="showDetails(ev)" ng-class="ev.theater">
+								<div class="tactic-icon">
+									<img ng-src="images/{{ev.programInitials}}" alt="{{ev.programInitials}}" />
+								</div>
+								<div class="tactic-name" data-toggle="tooltip" data-placement="top" title="{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+							<div class="more" ng-click="showEvents(day.Events)"></div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td ng-repeat="day in semana5" valign="top" ng-if="day.Weekend == 'NO'" ng-class="{ 'weekend' : day.Weekend == 'YES', 'other-month' : day.ActualMonth == 'NO' }">
+						<div class="date">{{day.Day}}</div>
+						<div ng-show="day.Events.length < 3">
+							<div ng-repeat="ev in day.Events" class="tactic" ng-click="showDetails(ev)" ng-class="ev.theater">
+								<div class="tactic-icon">
+									<img ng-src="images/{{ev.programInitials}}" alt="{{ev.programInitials}}" />
+								</div>
+								<div class="tactic-name" data-toggle="tooltip" data-placement="top" title="{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+						</div>
+						<div ng-show="day.Events.length >= 3">
+							<div ng-repeat="ev in day.Events | limitTo:2" class="tactic" ng-click="showDetails(ev)" ng-class="ev.theater">
+								<div class="tactic-icon">
+									<img ng-src="images/{{ev.programInitials}}" alt="{{ev.programInitials}}" />
+								</div>
+								<div class="tactic-name" data-toggle="tooltip" data-placement="top" title="{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+							<div class="more" ng-click="showEvents(day.Events)"></div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<table id="reporte" style="width: 100%;display:none;" data-tableexport-display="always">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Campaign Name</th>
+					<th>Program</th>
+					<th>CTA</th>
+					<th>Tactic</th>
+					<th>Campaign Owner</th>
+					<th>Tactic Start Date</th>
+					<th>Tactic End Date</th>
+					<th>Tactic Stage</th>
+					<th>Theater</th>
+					<th>Sub Area</th>
+					<th>Languages</th>
+					<th>Solution</th>
+					<th>Business Segment</th>
+					<th>Vertical</th>
+					<th>General Comments</th>
+					<th>SFDC Campaign Name</th>
+					<th>SFDC Dashboard Link</th>
+					<th>Promocode</th>
+					<th>Campaign Start Date</th>
+					<th>Campaign End Date</th>
+					<th>Agency</th>
+					<th>Library Link</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="ev in allWeeks">
+					<td>{{ev.eventId}}</td>
+					<td>{{ev.campaignName}}</td>
+					<td>{{ev.programName}}</td>
+					<td>{{ev.ctaOffer}}</td>
+					<td>{{ev.tacticName}}</td>
+					<td>{{ev.UsuarioNombre}}</td>
+					<td>{{ev.dateStartString}}</td>
+					<td>{{ev.dateEndString}}</td>
+					<td>{{ev.tacticStage}}</td>
+					<td>{{ev.theater}}</td>
+					<td>{{ev.subArea}}</td>
+					<td>{{ev.languages}}</td>
+					<td>{{ev.businessUnit}}</td>
+					<td>{{ev.businessSegment}}</td>
+					<td>{{ev.vertical}}</td>
+					<td>{{ev.comments}}</td>
+					<td>{{ev.sfdcCampaignName}}</td>
+					<td>{{ev.sfdcDashboardLink}}</td>
+					<td>{{ev.promocode}}</td>
+					<td>{{ev.campaignDateStartString}}</td>
+					<td>{{ev.campaignDateEndString}}</td>
+					<td>{{ev.agencyInternal}}</td>
+					<td>{{ev.linkLibrary}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<div id="calendarControls" ng-if="montly">
+			<button style="width: auto;" class="btn btn-default" print-btn><i class="fa fa-print" aria-hidden="true" style="color: #fff;"></i>&nbsp;Print</button>
+			<button style="width: auto;" class="btn btn-default" ng-click="toExcel()"><i class="fa fa-file-excel-o" aria-hidden="true" style="color:#fff;"></i>&nbsp;Excel</button>
+
+		</div>
+		
+		
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs hide" role="tablist" id="weeklytabletabs">
+			<li role="presentation" class="active"><a href="#mon" target="_self" aria-controls="home" role="tab" data-toggle="tab">WEEK 1</a></li>
+			<li role="presentation"><a href="#tue" target="_self" aria-controls="profile" role="tab" data-toggle="tab">WEEK 2</a></li>
+			<li role="presentation"><a href="#wed" target="_self" aria-controls="messages" role="tab" data-toggle="tab">WEEK 3</a></li>
+			<li role="presentation"><a href="#thu" target="_self" aria-controls="settings" role="tab" data-toggle="tab">WEEK 4</a></li>
+			<li role="presentation"><a href="#fri" target="_self" aria-controls="settings" role="tab" data-toggle="tab">WEEK 5</a></li>
+		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content hide" id="weeklytable">
+			<div role="tabpanel" class="tab-pane active" id="mon">
+				<br>
+				<table class="calendar dates-weekly" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td valign="top">
+							<div class="date">{{semana1[1].Day}} - Monday</div>
+							<div ng-repeat="ev in semana1[1].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+						</td>
+						<td valign="top">
+							<div class="date">{{semana1[2].Day}} - Tuesday</div>
+							<div ng-repeat="ev in semana1[2].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+							
+						</td>
+						<td valign="top">
+							<div class="date">{{semana1[3].Day}} - Wednesday</div>
+							<div ng-repeat="ev in semana1[3].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+							
+						</td>
+						<td valign="top">
+							<div class="date">{{semana1[4].Day}} - Thursday</div>
+							<div ng-repeat="ev in semana1[4].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+						   
+						</td>
+						<td valign="top">
+							<div class="date">{{semana1[5].Day}} - Friday</div>
+							<div ng-repeat="ev in semana1[5].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+						  
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="tue">
+				<br>
+				<table class="calendar dates-weekly" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td valign="top">
+							<div class="date">{{semana2[1].Day}} - Monday</div>
+							<div ng-repeat="ev in semana2[1].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+							
+
+							</td>
+						<td valign="top">
+							<div class="date">{{semana2[2].Day}} - Tuesday</div>
+							<div ng-repeat="ev in semana2[2].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+							
+						</td>
+						<td valign="top">
+							<div class="date">{{semana2[3].Day}} - Wednesday</div>
+							<div ng-repeat="ev in semana2[3].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+
+						</td>
+						<td valign="top">
+							<div class="date">{{semana2[4].Day}} - Thursday</div>
+							<div ng-repeat="ev in semana2[4].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+
+						   
+						</td>
+						<td valign="top">
+							<div class="date">{{semana2[5].Day}} - Friday</div>
+							<div ng-repeat="ev in semana2[5].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+							
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="wed">
+				<br>
+				<table class="calendar dates-weekly" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td valign="top">
+							<div class="date">{{semana3[1].Day}} - Monday</div>
+							<div ng-repeat="ev in semana3[1].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+							
+
+
+						</td>
+						<td valign="top">
+							<div class="date">{{semana3[2].Day}} - Tuesday</div>
+							<div ng-repeat="ev in semana3[2].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+
+						</td>
+						<td valign="top">
+							<div class="date">{{semana3[3].Day}} - Wednesday</div>
+							<div ng-repeat="ev in semana3[3].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+
+						</td>
+						<td valign="top">
+							<div class="date">{{semana3[4].Day}} - Thursday</div>
+							<div ng-repeat="ev in semana3[4].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+							
+
+						   
+						</td>
+						<td valign="top">
+							<div class="date">{{semana3[5].Day}} - Friday</div>
+							<div ng-repeat="ev in semana3[5].Events" class="tactic-weekly " ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+
+							
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="thu">
+				<br>
+				<table class="calendar dates-weekly" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td valign="top">
+							<div class="date">{{semana4[1].Day}} - Monday</div>
+							<div ng-repeat="ev in semana4[1].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+
+						</td>
+						<td valign="top">
+							<div class="date">{{semana4[2].Day}} - Tuesday</div>
+							<div ng-repeat="ev in semana4[2].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+						 
+						</td>
+						<td valign="top">
+							<div class="date">{{semana4[3].Day}} - Wednesday</div>
+							<div ng-repeat="ev in semana4[3].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+
+						</td>
+						<td valign="top">
+							<div class="date">{{semana4[4].Day}} - Thursday</div>
+							<div ng-repeat="ev in semana4[4].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+
+						</td>
+						<td valign="top">
+							<div class="date">{{semana4[5].Day}} - Friday</div>
+							<div ng-repeat="ev in semana4[5].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="fri">
+				<br>
+				<table class="calendar dates-weekly" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td valign="top">
+							<div class="date">{{semana5[1].Day}} - Monday</div>
+							<div ng-repeat="ev in semana5[1].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+					  
+						</td>
+						<td valign="top">
+							<div class="date">{{semana5[2].Day}} - Tuesday</div>
+							<div ng-repeat="ev in semana5[2].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+
+						</td>
+						<td valign="top">
+							<div class="date">{{semana5[3].Day}} - Wednesday</div>
+							<div ng-repeat="ev in semana5[3].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+
+
+						</td>
+						<td valign="top" class="weekend">
+							<div class="date">{{semana5[4].Day}} - Thursday</div>
+							<div ng-repeat="ev in semana5[4].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+						</td>
+						<td valign="top" class="weekend">
+							<div class="date">{{semana5[5].Day}} - Friday</div>
+							<div ng-repeat="ev in semana5[5].Events" class="tactic-weekly" ng-class="ev.theater" ng-click="showDetails(ev)">
+								<div class="tactic-type-weekly">
+									{{ev.programName}}
+								</div><br>
+								<div class="tactic-name-weekly">
+									{{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+								</div>
+							</div>
+						   
+
+						</td>
+					</tr>
+				</table>
+			</div>
+			<button style="width: auto;" class="btn btn-default" ng-click="toExcel()"><i class="fa fa-file-excel-o" aria-hidden="true" style="color:#fff;"></i>&nbsp;Excel</button>
+		</div>
+		<br>
+		<!--<div class="newsletter btn btn-default" ng-click="showModalNewsLetter()">
+			Subscribe to Get Email updates
+		</div>-->
+	</div>
+</div>
+
+<!--Modal Campaña-->
+<div id="modaltactic" class="modal fade" role="dialog">
+	<div class="modal-dialog modal-lg">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">{{actualEvent.campaignName}} - {{actualEvent.tacticName}} - {{actualEvent.theater}}</h4>
+			</div>
+			<div class="modal-body">
+				<div class="modal-tactic">
+					<div class="row modal-tactic-row">
+						<!--<div class="col-sm-12" style="text-align: center; color: #cc0000;">
+							<strong style="text-decoration: underline;">Tactic Details</strong>
+						</div>-->
+						<div class="col-sm-6">
+							<strong>CAMPAIGN OWNER</strong>
+						</div>
+						<div class="col-sm-6">
+							{{actualEvent.UsuarioNombre}}&nbsp;
+						</div>
+						<div class="col-sm-6">
+							<strong>CAMPAIGN </strong>
+						</div>
+						<div class="col-sm-6">
+							{{actualEvent.campaignName}}&nbsp;
+						</div>
+						<div class="col-sm-6">
+							<strong>PROGRAM</strong>
+						</div>
+						<div class="col-sm-6">
+							{{actualEvent.programName}}&nbsp;
+						</div>
+						<div class="col-sm-6">
+							<strong>SOLUTION  </strong>
+						</div>
+						<div class="col-sm-6">
+							{{actualEvent.businessUnit}}&nbsp;
+						</div>
+						<div class="col-sm-6">
+							<strong>BUSINESS SEGMENT</strong>
+						</div>
+						<div class="col-sm-6">
+							{{actualEvent.businessSegment}}&nbsp;
+						</div>
+						<div class="col-sm-6">
+							<strong>VERTICAL</strong>
+						</div>
+						<div class="col-sm-6">
+							{{actualEvent.vertical}}&nbsp;
+						</div>
+						<div class="col-sm-6">
+							<strong>TARGET AUDIENCE</strong>
+						</div>
+						<div class="col-sm-6">
+							{{actualEvent.targetAudience}}&nbsp;
+						</div>
+						<div class="col-sm-6">
+							<strong>TACTIC</strong>
+						</div>
+						<div class="col-sm-6">
+							{{actualEvent.tacticName}}&nbsp;
+						</div>
+						<div class="col-sm-6">
+							<strong>TACTIC STAGE</strong>
+						</div>
+						<div class="col-sm-6">
+							{{actualEvent.tacticStage}}&nbsp;
+						</div>
+						<div class="col-sm-6">
+							<strong>CTA</strong>
+						</div>
+						<div class="col-sm-6">
+							{{actualEvent.ctaOffer}}&nbsp;
+						</div>
+						<div class="col-sm-6">
+							<strong>TACTIC START DATE</strong>
+						</div>
+						<div class="col-sm-6">
+							{{actualEvent.dateStart | cmdate:'MMM dd - yyyy'}}&nbsp;
+						</div>
+						<div class="col-sm-6">
+							<strong>TACTIC END DATE</strong>
+						</div>
+						<div class="col-sm-6">
+							{{actualEvent.dateEnd | cmdate:'MMM dd - yyyy'}}&nbsp;
+						</div>
+						<div class="col-sm-6">
+							<strong>THEATER</strong>
+						</div>
+						<div class="col-sm-6">
+							{{actualEvent.theater}}&nbsp;
+						</div>
+						<div class="col-sm-6">
+							<strong>REGION </strong>
+						</div>
+						<div class="col-sm-6">
+							{{actualEvent.subArea}}&nbsp;
+						</div>
+						<div class="col-sm-6">
+							<strong>LANGUAGE</strong>
+						</div>
+						<div class="col-sm-6">
+							{{actualEvent.languages}}&nbsp;
+						</div>
+						<div class="col-sm-6">
+							<strong>SFDC CAMPAIGN NAME</strong>
+						</div>
+						<div class="col-sm-6">
+							{{actualEvent.sfdcCampaignName}}&nbsp;
+						</div>
+						<div class="col-sm-6">
+							<strong>SFDC DASHBOARD LINK</strong>
+						</div>
+						<div class="col-sm-6">
+							<a ng-href="{{actualEvent.sfdcDashboardLink}}" href="" target="_blank">{{actualEvent.sfdcDashboardLink}}</a>&nbsp;
+						</div>
+						<div class="col-sm-6">
+							<strong>PROMOCODE</strong>
+						</div>
+						<div class="col-sm-6">
+							{{actualEvent.promocode}}&nbsp;
+						</div>
+						<div class="col-sm-6">
+							<strong>AGENCY</strong>
+						</div>
+						<div class="col-sm-6">
+							{{actualEvent.agencyInternal}}&nbsp;
+						</div>
+						<div class="col-sm-6" ng-if="actualEvent.agencyInternal == 'Televerde'">
+							<strong>TELEVERDE LINK</strong>
+						</div>
+						<div class="col-sm-6" ng-if="actualEvent.agencyInternal == 'Televerde'">
+							https://myaccountnow.televerde.com/&nbsp;
+						</div>
+						<div class="col-sm-6">
+							<strong>LIBRARY LINK</strong>
+						</div>
+						<div class="col-sm-6">
+							{{actualEvent.linkLibrary}}&nbsp;
+						</div>
+						<div class="col-sm-6">
+							<strong>GENERAL COMMENTS</strong>
+						</div>
+						<div class="col-sm-6">
+							{{actualEvent.comments}}&nbsp;
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default modal-btn-close" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--FIN - Modal Campaña-->
+
+<!--Modal Varias Campañas -->
+
+<div id="myModal" class="modal fade" role="dialog">
+	<div class="modal-dialog modal-lg">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">{{ dayEvents[0].dateStart | cmdate:'MMM dd' }} - {{ dayEvents[0].dateStart | cmQ }}</h4>
+			</div>
+			<div class="modal-body">
+				<div class="modal-tactic" ng-repeat="event in dayEvents">
+					<div class="tactic-type modal-tactic-type">
+						{{event.programInitials}}
+					</div><br>
+					<div class="row modal-tactic-row">
+						<div class="col-sm-4">
+							<strong>{{event.campaignName}}</strong>&nbsp;
+						</div>
+						<div class="col-sm-4">
+							{{event.comments}}&nbsp;
+						</div>
+						<div class="col-sm-4">
+							<div class="modal-btn" ng-click="showDetails(event,true)">
+								More Details  +&nbsp;
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+
+				<button type="button" class="btn btn-default modal-btn-close" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--FIN - Modal Varias Campañas -->
+
+<!--Modal Newsletter-->
+  <div id="modalnewsletter" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+	<!-- Modal content-->
+	<div class="modal-content">
+	  <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">&times;</button>
+		<h4 class="modal-title">Select the options to receibe email updates for the region of your interest</h4>
+	  </div>
+	  <div class="modal-body">
+		<form>
+			<div class=" form-group">
+						<label>Do you want to get calendar email updates to [email@avaya.com]?</label>
+							<div class="row">
+								<div class="col-sm-6">
+								<input type="checkbox" aria-label="..."><label>YES</label>
+								</div>
+								<div class="col-sm-6">
+								<input type="checkbox" aria-label="..."><label>NO</label>
+								</div>
+							</div>
+			</div>
+			<div class=" form-group">
+						<label>Select the theater updates you want to receive</label>
+							<div class="row">
+								<div class="col-sm-4">
+								<input type="checkbox" aria-label="..."><label>AI</label>
+								</div>
+								<div class="col-sm-4">
+								<input type="checkbox" aria-label="..."><label>APAC</label>
+								</div>
+								<div class="col-sm-4">
+								<input type="checkbox" aria-label="..."><label>EMEA</label>
+								</div>
+							</div>
+							<div class="row">
+								<!--<div class="col-sm-4">
+								<input type="checkbox" aria-label="..."><label>GGM</label>
+								</div>-->
+								<div class="col-sm-4">
+								<input type="checkbox" aria-label="..."><label>US</label>
+								</div>
+							</div>
+			</div>
+			<div class="newsletter btn btn-default" data-toggle="modal" data-target="#modalnewsletter">
+					Apply Changes
+				  </div>
+				  <div style="clear:both;"></div>
+		</form>
+	  </div>
+	  <div class="modal-footer">
+		<button type="button" class="btn btn-default modal-btn-close" data-dismiss="modal">Close</button>
+	  </div>
+	</div>
+
+  </div>
+</div>
+  
+  <!--End Modal Newsletter-->

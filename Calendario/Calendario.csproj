@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7A9EAB4E-91A8-4D10-8698-A4410F8CCC31}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Calendario</RootNamespace>
+    <AssemblyName>Calendario</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assetsBackEnd\plugins\.DS_Store" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\.gitignore" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\bower.help" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\bower.json" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\CHANGELOG.md" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\css\editor.sass" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\LICENSE.md" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\package.json" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\README.md" />
+    <Content Include="assetsBackEnd\plugins\datatables\.DS_Store" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\.DS_Store" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\.DS_Store" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\css\dataTables.responsive.scss" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\Readme.md" />
+    <Content Include="assetsFrontEnd\css\.DS_Store" />
+    <Content Include="assetsFrontEnd\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assetsFrontEnd\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assetsFrontEnd\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assetsFrontEnd\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="assetsFrontEnd\img\Thumbs.db" />
+    <Content Include="BackEnd.html" />
+    <Content Include="BackEndBlitz.html" />
+    <Content Include="Calendar.html" />
+    <Content Include="CalendarBlitz.html" />
+    <Content Include="CalendarCampsBlitz.html" />
+    <Content Include="Data\businessSegmentList.json" />
+    <Content Include="Data\businessUnitList.json" />
+    <Content Include="Data\ctaOfferList.json" />
+    <Content Include="Data\languagesList.json" />
+    <Content Include="Data\subAreasList.json" />
+    <Content Include="Data\tacticList.json" />
+    <Content Include="Data\targetAudienceList.json" />
+    <Content Include="Data\theaterList.json" />
+    <Content Include="Data\verticalsList.json" />
+    <EntityDeploy Include="Datos\ModelCalendar.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelCalendar1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Datos\ModelCalendar.edmx.diagram">
+      <DependentUpon>ModelCalendar.edmx</DependentUpon>
+    </Content>
+    <Content Include="index.html" />
+    <Content Include="js\angular\angular-route.min.js.map" />
+    <Content Include="js\angular\angular-sanitize.min.js.map" />
+    <Content Include="js\angular\angular.min.js.map" />
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CalendarioV2.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assetsBackEnd\logos\120219-StandardHidraulica_logo.jpg" />
+    <Content Include="assetsBackEnd\logos\174333-santalogo.png" />
+    <Content Include="assetsBackEnd\logos\174354-mistrallogo.png" />
+    <Content Include="assetsBackEnd\logos\a-plus-icon.png" />
+    <Content Include="assetsBackEnd\logos\Accorhotels_logo_fr.jpg" />
+    <Content Include="assetsBackEnd\logos\acorhoteles-logo.png" />
+    <Content Include="assetsBackEnd\logos\actafarma-logo.png" />
+    <Content Include="assetsBackEnd\logos\Actafarma_Logo_430x450.jpg" />
+    <Content Include="assetsBackEnd\logos\Angel Mir - Portes Bisbal_Logo_430x450.jpg" />
+    <Content Include="assetsBackEnd\logos\angelmir-logo.png" />
+    <Content Include="assetsBackEnd\logos\aplus SRC logo 300 dpi.jpg" />
+    <Content Include="assetsBackEnd\logos\aplus-logo-rojo-e1436281908192.png" />
+    <Content Include="assetsBackEnd\logos\boiron-logo.png" />
+    <Content Include="assetsBackEnd\logos\bussiness-services-logo.png" />
+    <Content Include="assetsBackEnd\logos\CCOO_Logo_430x450.jpg" />
+    <Content Include="assetsBackEnd\logos\comisiones-obreras-logo.png" />
+    <Content Include="assetsBackEnd\logos\comunicaciones-c&amp;B-logo.png" />
+    <Content Include="assetsBackEnd\logos\crambo-logo.png" />
+    <Content Include="assetsBackEnd\logos\crambo.jpg" />
+    <Content Include="assetsBackEnd\logos\daunis-logo.png" />
+    <Content Include="assetsBackEnd\logos\Daunis_Logo_430x450.jpg" />
+    <Content Include="assetsBackEnd\logos\download.jpeg" />
+    <Content Include="assetsBackEnd\logos\ednon-logo.png" />
+    <Content Include="assetsBackEnd\logos\ednon_logo.gif" />
+    <Content Include="assetsBackEnd\logos\electroTEL.png" />
+    <Content Include="assetsBackEnd\logos\electrotel_logo.jpg" />
+    <Content Include="assetsBackEnd\logos\fereacion-valenciana-logo.png" />
+    <Content Include="assetsBackEnd\logos\FFCV_Logo_430x450.jpg" />
+    <Content Include="assetsBackEnd\logos\fidsud-logo.png" />
+    <Content Include="assetsBackEnd\logos\FIDSUD_logo.jpg" />
+    <Content Include="assetsBackEnd\logos\firma_2012.png" />
+    <Content Include="assetsBackEnd\logos\gesdocument-logo.png" />
+    <Content Include="assetsBackEnd\logos\gesdocument_logo.jpg" />
+    <Content Include="assetsBackEnd\logos\grimadlines-icon.png" />
+    <Content Include="assetsBackEnd\logos\GrimaldiLines_Logo_430x450.jpg" />
+    <Content Include="assetsBackEnd\logos\groupe-scopelec-68.jpg-68-350x350.jpg" />
+    <Content Include="assetsBackEnd\logos\groupe-scopelec-logo.jpg" />
+    <Content Include="assetsBackEnd\logos\grupo-scopelec-logo.png" />
+    <Content Include="assetsBackEnd\logos\infocom-logo.png" />
+    <Content Include="assetsBackEnd\logos\infocom.png" />
+    <Content Include="assetsBackEnd\logos\isolas-logo.png" />
+    <Content Include="assetsBackEnd\logos\isolas_logo_430x450v2.jpg" />
+    <Content Include="assetsBackEnd\logos\leader-logos.png" />
+    <Content Include="assetsBackEnd\logos\logo-1.png" />
+    <Content Include="assetsBackEnd\logos\logo-2.jpg" />
+    <Content Include="assetsBackEnd\logos\logo-3.jpg" />
+    <Content Include="assetsBackEnd\logos\logo-4.jpg" />
+    <Content Include="assetsBackEnd\logos\logo1.png" />
+    <Content Include="assetsBackEnd\logos\med-home-sol.png" />
+    <Content Include="assetsBackEnd\logos\MedHome_Logo_430x450.jpg" />
+    <Content Include="assetsBackEnd\logos\mistral-logo.png" />
+    <Content Include="assetsBackEnd\logos\nunsys-logo.png" />
+    <Content Include="assetsBackEnd\logos\orange_business_services.png" />
+    <Content Include="assetsBackEnd\logos\part-1.jpg" />
+    <Content Include="assetsBackEnd\logos\part-2.jpg" />
+    <Content Include="assetsBackEnd\logos\part-3.jpg" />
+    <Content Include="assetsBackEnd\logos\part-4.jpg" />
+    <Content Include="assetsBackEnd\logos\santa-logo.png" />
+    <Content Include="assetsBackEnd\logos\SCTrade_logo_450x430.jpg" />
+    <Content Include="assetsBackEnd\logos\SCTrade_logo_450x430.png" />
+    <Content Include="assetsBackEnd\logos\sergas_logo1.jpg" />
+    <Content Include="assetsBackEnd\logos\servicio-gallego.png" />
+    <Content Include="assetsBackEnd\logos\standard-logo.png" />
+    <Content Include="assetsBackEnd\logos\tellint-logo.png" />
+    <Content Include="assetsBackEnd\logos\telpym.jpg" />
+    <Content Include="assetsBackEnd\logos\telpymeser-logo.png" />
+    <Content Include="assetsBackEnd\logos\ticketmaster-logo.png" />
+    <Content Include="assetsBackEnd\logos\trade-center-logo.png" />
+    <Content Include="assetsBackEnd\logos\vinadeis-logo.png" />
+    <Content Include="assetsBackEnd\logos\vinadeis_logo.jpg" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\dev\index.html" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\dist\editor.min.css" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\dist\images\header-bg.gif" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\dist\images\header-bg.orig.gif" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\dist\images\icons.old.png" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\dist\images\icons.png" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\dist\images\logo.png" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\dist\images\resize.gif" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\dist\wysiwyg.min.js" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\gulpfile.js" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\images\header-bg.gif" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\images\header-bg.orig.gif" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\images\icons.old.png" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\images\icons.png" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\images\logo.png" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\images\resize.gif" />
+    <Content Include="assetsBackEnd\plugins\angularEditor\js\wysiwyg.js" />
+    <Content Include="assetsBackEnd\plugins\datatables\dataTables.bootstrap.css" />
+    <Content Include="assetsBackEnd\plugins\datatables\dataTables.bootstrap.js" />
+    <Content Include="assetsBackEnd\plugins\datatables\dataTables.bootstrap.min.js" />
+    <Content Include="assetsBackEnd\plugins\datatables\datatables.responsive.css" />
+    <Content Include="assetsBackEnd\plugins\datatables\datatables.responsive.min.js" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\css\dataTables.responsive.css" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\child-rows\column-control.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\child-rows\custom-renderer.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\child-rows\disable-child-rows.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\child-rows\index.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\child-rows\right-column.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\child-rows\whole-row-control.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\display-control\auto.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\display-control\classes.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\display-control\complexHeader.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\display-control\fixedHeader.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\display-control\index.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\display-control\init-classes.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\index.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\initialisation\ajax.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\initialisation\className.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\initialisation\default.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\initialisation\index.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\initialisation\new.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\initialisation\option.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\styling\bootstrap.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\styling\compact.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\styling\foundation.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\styling\index.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\examples\styling\scrolling.html" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\js\dataTables.responsive.js" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\js\dataTables.responsive.min.js" />
+    <Content Include="assetsBackEnd\plugins\datatables\extensions\Responsive\License.txt" />
+    <Content Include="assetsBackEnd\plugins\datatables\images\sort_asc.png" />
+    <Content Include="assetsBackEnd\plugins\datatables\images\sort_asc_disabled.png" />
+    <Content Include="assetsBackEnd\plugins\datatables\images\sort_both.png" />
+    <Content Include="assetsBackEnd\plugins\datatables\images\sort_desc.png" />
+    <Content Include="assetsBackEnd\plugins\datatables\images\sort_desc_disabled.png" />
+    <Content Include="assetsBackEnd\plugins\datatables\jquery.dataTables.css" />
+    <Content Include="assetsBackEnd\plugins\datatables\jquery.dataTables.js" />
+    <Content Include="assetsBackEnd\plugins\datatables\jquery.dataTables.min.css" />
+    <Content Include="assetsBackEnd\plugins\datatables\jquery.dataTables.min.js" />
+    <Content Include="assetsBackEnd\plugins\datatables\jquery.dataTables_themeroller.css" />
+    <Content Include="assetsBackEnd\plugins\fastclick\fastclick.js" />
+    <Content Include="assetsBackEnd\plugins\fastclick\fastclick.min.js" />
+    <Content Include="assetsBackEnd\plugins\iCheck\all.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\aero%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\aero.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\aero.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\blue%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\blue.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\blue.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\flat%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\flat.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\flat.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\green%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\green.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\green.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\grey%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\grey.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\grey.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\orange%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\orange.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\orange.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\pink%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\pink.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\pink.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\purple%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\purple.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\purple.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\red%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\red.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\red.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\yellow%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\yellow.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\yellow.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\flat\_all.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\futurico\futurico%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\futurico\futurico.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\futurico\futurico.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\icheck.js" />
+    <Content Include="assetsBackEnd\plugins\iCheck\icheck.min.js" />
+    <Content Include="assetsBackEnd\plugins\iCheck\line\aero.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\line\blue.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\line\green.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\line\grey.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\line\line%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\line\line.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\line\line.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\line\orange.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\line\pink.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\line\purple.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\line\red.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\line\yellow.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\line\_all.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\aero%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\aero.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\aero.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\blue%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\blue.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\blue.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\green%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\green.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\green.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\grey%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\grey.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\grey.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\minimal%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\minimal.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\minimal.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\orange%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\orange.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\orange.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\pink%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\pink.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\pink.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\purple%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\purple.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\purple.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\red%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\red.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\red.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\yellow%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\yellow.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\yellow.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\minimal\_all.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\polaris\polaris%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\polaris\polaris.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\polaris\polaris.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\aero%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\aero.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\aero.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\blue%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\blue.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\blue.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\green%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\green.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\green.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\grey%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\grey.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\grey.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\orange%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\orange.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\orange.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\pink%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\pink.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\pink.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\purple%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\purple.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\purple.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\red%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\red.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\red.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\square%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\square.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\square.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\yellow%402x.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\yellow.css" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\yellow.png" />
+    <Content Include="assetsBackEnd\plugins\iCheck\square\_all.css" />
+    <Content Include="assetsBackEnd\plugins\jQuery\jQuery-2.1.4.min.js" />
+    <Content Include="assetsBackEnd\plugins\slimScroll\jquery.slimscroll.js" />
+    <Content Include="assetsBackEnd\plugins\slimScroll\jquery.slimscroll.min.js" />
+    <Content Include="assetsFrontEnd\css\bootstrap.css" />
+    <Content Include="assetsFrontEnd\css\proxima-font.css" />
+    <Content Include="assetsFrontEnd\css\styles.css" />
+    <Content Include="assetsFrontEnd\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assetsFrontEnd\img\arrow.png" />
+    <Content Include="assetsFrontEnd\img\avaya-logo-08.png" />
+    <Content Include="assetsFrontEnd\img\bg-header.png" />
+    <Content Include="assetsFrontEnd\img\bg-headerBlitz.png" />
+    <Content Include="assetsFrontEnd\img\bullet.jpg" />
+    <Content Include="assetsFrontEnd\img\cal-01.png" />
+    <Content Include="assetsFrontEnd\img\cal-02.png" />
+    <Content Include="assetsFrontEnd\img\MCS-logo.png" />
+    <Content Include="assetsFrontEnd\js\bootstrap.js" />
+    <Content Include="assetsFrontEnd\js\jquery-1.11.2.min.js" />
+    <Content Include="Datos\ModelCalendar.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelCalendar.Context1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datos\ModelCalendar.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelCalendar1.cs</LastGenOutput>
+    </Content>
+    <Content Include="images\back-header.jpg" />
+    <Content Include="images\back-table.jpg" />
+    <Content Include="images\back-title.jpg" />
+    <Content Include="images\blog.png" />
+    <Content Include="images\brochure.png" />
+    <Content Include="images\case.png" />
+    <Content Include="images\com.png" />
+    <Content Include="images\ebook.png" />
+    <Content Include="images\event.png" />
+    <Content Include="images\fact.png" />
+    <Content Include="images\gears32.gif" />
+    <Content Include="images\icon-form.png" />
+    <Content Include="images\info.png" />
+    <Content Include="images\interactive.png" />
+    <Content Include="images\logo-white.png" />
+    <Content Include="images\microsite.png" />
+    <Content Include="images\ondemand.png" />
+    <Content Include="images\other.png" />
+    <Content Include="images\video.png" />
+    <Content Include="images\webinar.png" />
+    <Content Include="images\whitepaper.png" />
+    <Content Include="js\ajaxFileUpload.js" />
+    <Content Include="js\angular\angular-route.min.js" />
+    <Content Include="js\angular\angular-sanitize.min.js" />
+    <Content Include="js\angular\angular.min.js" />
+    <Content Include="js\angular\angularPrint.css" />
+    <Content Include="js\angular\angularPrint.js" />
+    <Content Include="js\angular\ng-tags-input.js" />
+    <Content Include="js\appFront\calendarFrontEndApp.js" />
+    <Content Include="js\appFront\calendarFrontEndController - Copia.js" />
+    <Content Include="js\appFront\calendarFrontEndController.js" />
+    <Content Include="js\appFront\calendarFrontEndModel.js" />
+    <Content Include="js\app\addCampaignController.js" />
+    <Content Include="js\app\calendarBackEndApp.js" />
+    <Content Include="js\app\calendarBackEndController.js" />
+    <Content Include="js\app\calendarBackEndModel.js" />
+    <Content Include="js\app\calendarController.js" />
+    <Content Include="js\app\cloneCampaignController.js" />
+    <Content Include="js\app\feedbackController.js" />
+    <Content Include="js\app\indexApp.js" />
+    <Content Include="js\app\indexController.js" />
+    <Content Include="js\app\indexModel.js" />
+    <Content Include="js\app\masterHome.js" />
+    <Content Include="js\app\updateCampaignController.js" />
+    <Content Include="js\app\usersController.js" />
+    <Content Include="js\blitzBack\addCampaignController.js" />
+    <Content Include="js\blitzBack\calendarBackEndApp.js" />
+    <Content Include="js\blitzBack\calendarBackEndController.js" />
+    <Content Include="js\blitzBack\calendarBackEndModel.js" />
+    <Content Include="js\blitzBack\calendarController.js" />
+    <Content Include="js\blitzBack\cloneCampaignController.js" />
+    <Content Include="js\blitzBack\feedbackController.js" />
+    <Content Include="js\blitzBack\updateCampaignController.js" />
+    <Content Include="js\blitzBack\usersController.js" />
+    <Content Include="js\blitzFront\calendarBlitzApp.js" />
+    <Content Include="js\blitzFront\CalendarBlitzController.js" />
+    <Content Include="js\blitzFront\calendarBlitzModel.js" />
+    <Content Include="js\bootbox.min.js" />
+    <Content Include="js\bootstrap-multiselect.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\campBlitzFront\calendarCampBlitzApp.js" />
+    <Content Include="js\campBlitzFront\CalendarCampBlitzController.js" />
+    <Content Include="js\campBlitzFront\calendarCampBlitzModel.js" />
+    <Content Include="js\ckEditor.js" />
+    <Content Include="js\FileSaver.js" />
+    <Content Include="js\FileSaver.min.js" />
+    <Content Include="js\html2canvas.min.js" />
+    <Content Include="js\ie-emulation-modes-warning.js" />
+    <Content Include="js\ie10-viewport-bug-workaround.js" />
+    <Content Include="js\jquery.dd.min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\npm.js" />
+    <Content Include="js\tableExport.js" />
+    <Content Include="js\tableExport.min.js" />
+    <Content Include="MailsTemplates\passwordPerdido.html" />
+    <Content Include="MailsTemplates\solicitudUsuarioAdmin.html" />
+    <Content Include="MailsTemplates\solicitudUsuarioCliente.html" />
+    <Content Include="MailsTemplates\Telesales-Agent-ToolKit.html" />
+    <Content Include="ServiciosWeb\CalendarService.asmx" />
+    <Content Include="ServiciosWeb\UsuariosService.asmx" />
+    <Content Include="views\backEndBlitz\listaCampaigns.html" />
+    <Content Include="views\backend\addCampaign.html" />
+    <Content Include="views\backend\calendar.html" />
+    <Content Include="views\backend\cloneCampaign.html" />
+    <Content Include="views\backend\details.html" />
+    <Content Include="views\backend\feedback.html" />
+    <Content Include="views\backend\listaCampaigns.html" />
+    <Content Include="views\backend\updateCampaign.html" />
+    <Content Include="views\backend\users.html" />
+    <Content Include="views\frontend\calendar - Copia.html" />
+    <Content Include="views\frontend\calendar.html" />
+    <Content Include="views\frontend\calendarBlitz.html" />
+    <Content Include="views\frontend\calendarCampBlitz.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Datos\CalendarBlitz.cs">
+      <DependentUpon>ModelCalendar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Campaigns.cs">
+      <DependentUpon>ModelCalendar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\CampaingEvents.cs">
+      <DependentUpon>ModelCalendar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\feedback.cs">
+      <DependentUpon>ModelCalendar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\ModelCalendar.Context.cs" />
+    <Compile Include="Datos\ModelCalendar.cs" />
+    <Compile Include="Datos\ModelCalendar.Designer.cs">
+      <DependentUpon>ModelCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\ModelCalendar1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCalendar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\ModelCalendar1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCalendar.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Programs.cs">
+      <DependentUpon>ModelCalendar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\RA_managers.cs">
+      <DependentUpon>ModelCalendar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Usuarios.cs">
+      <DependentUpon>ModelCalendar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\ViewCampaingEvents.cs">
+      <DependentUpon>ModelCalendar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\View_CalendarAll.cs">
+      <DependentUpon>ModelCalendar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\View_CalendarBlitz.cs">
+      <DependentUpon>ModelCalendar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CampaignEventDal.cs" />
+    <Compile Include="Modelo\CampaignsDal.cs" />
+    <Compile Include="Modelo\FeedbackDal.cs" />
+    <Compile Include="Modelo\ProgramsDal.cs" />
+    <Compile Include="Modelo\UsuariosDal.cs" />
+    <Compile Include="Negocio\CampaignsBl.cs" />
+    <Compile Include="Negocio\CampaingEventsBl.cs" />
+    <Compile Include="Negocio\ControllerMails.cs" />
+    <Compile Include="Negocio\FeedbackBl.cs" />
+    <Compile Include="Negocio\ProgramsBl.cs" />
+    <Compile Include="Negocio\UsuariosBl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiciosWeb\CalendarService.asmx.cs">
+      <DependentUpon>CalendarService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServiciosWeb\UsuariosService.asmx.cs">
+      <DependentUpon>UsuariosService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>12549</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:12549/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

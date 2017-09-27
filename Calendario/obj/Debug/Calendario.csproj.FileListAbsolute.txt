@@ -1,0 +1,47 @@
+C:\Users\balle\Documents\Visual Studio 2013\Projects\Calendario\Calendario\bin\Calendario.dll.config
+C:\Users\balle\Documents\Visual Studio 2013\Projects\Calendario\Calendario\bin\Calendario.dll
+C:\Users\balle\Documents\Visual Studio 2013\Projects\Calendario\Calendario\bin\Calendario.pdb
+C:\Users\balle\Documents\Visual Studio 2013\Projects\Calendario\Calendario\bin\EntityFramework.dll
+C:\Users\balle\Documents\Visual Studio 2013\Projects\Calendario\Calendario\bin\EntityFramework.SqlServer.dll
+C:\Users\balle\Documents\Visual Studio 2013\Projects\Calendario\Calendario\bin\Newtonsoft.Json.dll
+C:\Users\balle\Documents\Visual Studio 2013\Projects\Calendario\Calendario\bin\EntityFramework.xml
+C:\Users\balle\Documents\Visual Studio 2013\Projects\Calendario\Calendario\bin\EntityFramework.SqlServer.xml
+C:\Users\balle\Documents\Visual Studio 2013\Projects\Calendario\Calendario\bin\Newtonsoft.Json.xml
+C:\Users\balle\Documents\Visual Studio 2013\Projects\Calendario\Calendario\obj\Debug\Calendario.dll
+C:\Users\balle\Documents\Visual Studio 2013\Projects\Calendario\Calendario\obj\Debug\Calendario.pdb
+H:\In Progress\Calendario\Calendario\bin\Calendario.dll.config
+H:\In Progress\Calendario\Calendario\bin\Calendario.dll
+H:\In Progress\Calendario\Calendario\bin\Calendario.pdb
+H:\In Progress\Calendario\Calendario\bin\EntityFramework.dll
+H:\In Progress\Calendario\Calendario\bin\EntityFramework.SqlServer.dll
+H:\In Progress\Calendario\Calendario\bin\Newtonsoft.Json.dll
+H:\In Progress\Calendario\Calendario\bin\EntityFramework.xml
+H:\In Progress\Calendario\Calendario\bin\EntityFramework.SqlServer.xml
+H:\In Progress\Calendario\Calendario\bin\Newtonsoft.Json.xml
+H:\In Progress\Calendario\Calendario\obj\Debug\Calendario.csprojResolveAssemblyReference.cache
+H:\In Progress\Calendario\Calendario\obj\Debug\Calendario.dll
+H:\In Progress\Calendario\Calendario\obj\Debug\Calendario.pdb
+C:\Users\balle\Desktop\In Progress\Calendario\Calendario\bin\Calendario.dll.config
+C:\Users\balle\Desktop\In Progress\Calendario\Calendario\bin\Calendario.dll
+C:\Users\balle\Desktop\In Progress\Calendario\Calendario\bin\Calendario.pdb
+C:\Users\balle\Desktop\In Progress\Calendario\Calendario\bin\EntityFramework.dll
+C:\Users\balle\Desktop\In Progress\Calendario\Calendario\bin\EntityFramework.SqlServer.dll
+C:\Users\balle\Desktop\In Progress\Calendario\Calendario\bin\Newtonsoft.Json.dll
+C:\Users\balle\Desktop\In Progress\Calendario\Calendario\bin\EntityFramework.xml
+C:\Users\balle\Desktop\In Progress\Calendario\Calendario\bin\EntityFramework.SqlServer.xml
+C:\Users\balle\Desktop\In Progress\Calendario\Calendario\bin\Newtonsoft.Json.xml
+C:\Users\balle\Desktop\In Progress\Calendario\Calendario\obj\Debug\Calendario.csprojResolveAssemblyReference.cache
+C:\Users\balle\Desktop\In Progress\Calendario\Calendario\obj\Debug\Calendario.dll
+C:\Users\balle\Desktop\In Progress\Calendario\Calendario\obj\Debug\Calendario.pdb
+D:\In Progress\Calendario\Calendario\bin\Calendario.dll.config
+D:\In Progress\Calendario\Calendario\bin\Calendario.dll
+D:\In Progress\Calendario\Calendario\bin\Calendario.pdb
+D:\In Progress\Calendario\Calendario\bin\EntityFramework.dll
+D:\In Progress\Calendario\Calendario\bin\EntityFramework.SqlServer.dll
+D:\In Progress\Calendario\Calendario\bin\Newtonsoft.Json.dll
+D:\In Progress\Calendario\Calendario\bin\EntityFramework.xml
+D:\In Progress\Calendario\Calendario\bin\EntityFramework.SqlServer.xml
+D:\In Progress\Calendario\Calendario\bin\Newtonsoft.Json.xml
+D:\In Progress\Calendario\Calendario\obj\Debug\Calendario.csprojResolveAssemblyReference.cache
+D:\In Progress\Calendario\Calendario\obj\Debug\Calendario.dll
+D:\In Progress\Calendario\Calendario\obj\Debug\Calendario.pdb

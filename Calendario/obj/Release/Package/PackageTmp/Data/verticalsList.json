@@ -1,0 +1,122 @@
+﻿ [{
+        "id": "0",
+        "name": "All"
+    },
+    {
+        "id": "1",
+        "name": "Aerospace/Defense"
+    },
+{
+        "id": "2",
+        "name": "Agriculture/Forestry/Fishing"
+    },
+{
+        "id": "3",
+        "name": "Automotive"
+    },
+{
+        "id": "4",
+        "name": "Communications/Broadcasting"
+    },
+{
+        "id": "5",
+        "name": "Construction/Architecture/Engineering"
+    },
+{
+        "id": "6",
+        "name": "Education - Higher Education"
+    },
+{
+        "id": "7",
+        "name": "Education - Primary/Secondary"
+    },
+{
+        "id": "8",
+        "name": "Education - Other"
+    },
+{
+        "id": "9",
+        "name": "Finance - Banking"
+    },
+{
+        "id": "10",
+        "name": "Finance - Insurance"
+    },
+{
+        "id": "11",
+        "name": "Finance - Other"
+    },
+{
+        "id": "12",
+        "name": "Government - Federal/National"
+    },
+{
+        "id": "13",
+        "name": "Government - State/Local"
+    },
+{
+        "id": "14",
+        "name": "Healthcare - Hospitals"
+    },
+{
+        "id": "15",
+        "name": "Healthcare - Other"
+    },
+{
+        "id": "16",
+        "name": "Hospitality - Hotels"
+    },
+{
+        "id": "17",
+        "name": "Hospitality - Other"
+    },
+{
+        "id": "18",
+        "name": "Legal Services"
+    },
+{
+        "id": "19",
+        "name": "Manufacturing"
+    },
+{
+        "id": "21",
+        "name": "Non-Profit Organizations"
+    },
+{
+        "id": "22",
+        "name": "Pharmaceutical/Biotech"
+    },
+{
+        "id": "23",
+        "name": "Printing/Publishing"
+    },
+{
+        "id": "24",
+        "name": "Professional Services"
+    },
+{
+        "id": "25",
+        "name": "Real Estate"
+    },
+{
+        "id": "26",
+        "name": "Retail"
+    },
+{
+        "id": "27",
+        "name": "Technology/Telecommunications"
+    },
+{
+        "id": "28",
+        "name": "Transportation"
+    },
+{
+        "id": "29",
+        "name": "Utilities"
+    },
+{
+        "id": "30",
+        "name": "Wholesale"
+    }
+]
+

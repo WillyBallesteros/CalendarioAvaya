@@ -1,0 +1,25 @@
+﻿[{
+        "id": "0",
+        "name": "All",
+        "bg-color": "#cccccc"
+    },
+    {
+        "id": "1",
+        "name": "Enterprise",
+        "bg-color": "#b4fcee"
+    },
+    {
+        "id": "2",
+        "name": "Midmarket",
+        "bg-color": "#d0e9fc"
+    },
+    {
+        "id": "3",
+        "name": "SMB",
+        "bg-color": "#ffe9d4"
+    }
+]
+    
+
+
+

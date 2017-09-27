@@ -1,0 +1,329 @@
+﻿
+/* tables */
+table.tablesorter {
+	font-family: arial;
+	margin: 10px 0pt 15px;
+	font-size: 8pt;
+	width: 100%;
+	text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #e6EEEE;
+	border: 1px solid #FFF;
+	font-size: 8pt;
+	padding: 4px;
+}
+table.tablesorter thead tr .header {
+	background-image: url(bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	color: #3D3D3D;
+	padding: 4px 18px;
+	background-color: rgba(255, 255, 255, 0.60);
+}
+table.tablesorter tbody tr.odd td {
+	background-color: #F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+	background-color: #8dbdd8;
+}
+/*----- styles  ------- */
+
+body {
+	background-color: #F2F2F2
+}
+table td:first-child {
+	position: absolute;
+	background-color: #ffffff;
+	height: 100px;
+	width: 150px;
+	margin-left: -10px;
+}
+table td:nth-child(2) {
+	padding-left: 150px!important;
+	height: 100px;
+}
+.arrow-down {
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #f00;
+}
+.arrow-right {
+	width: 0;
+	height: 0;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-left: 15px solid #cc0000;
+	cursor: pointer;
+	margin: 0 auto;
+}
+.arrow-left {
+	width: 0;
+	height: 0;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	cursor: pointer;
+	border-right: 15px solid #cc0000;
+	margin: 0 auto;
+}
+.arrow-up {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid black;
+}
+.body-login{
+	background: url(../images/back-header.jpg) top center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	}
+.btn-login{
+	background-color:#333333 !important;
+	width:100%;
+	color:#FFFFFF !important;
+	border-radius:0 !important;
+	border: none !important;
+	-moz-transition: all 0.3s ease-in;
+    /* WebKit */
+    -webkit-transition: all 0.3s ease-in;
+    /* Opera */
+    -o-transition: all 0.3s ease-in;
+    /* Standard */
+    transition: all 0.3s ease-in;}
+.btn-login:hover{
+	background-color:#000000 !important;
+	width:100%;
+	color:#FFFFFF !important;
+	border-radius:0 !important;
+	text-decoration:underline !important;
+	border: 1px solid #ffffff;
+	-moz-transition: all 0.3s ease-in;
+    /* WebKit */
+    -webkit-transition: all 0.3s ease-in;
+    /* Opera */
+    -o-transition: all 0.3s ease-in;
+    /* Standard */
+    transition: all 0.3s ease-in;
+	 }
+.c {
+	color: black;
+	background-color: #FFFFFF;
+	font-size: 11px;
+	border-radius: 50%;
+	width: 30px;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	border-color: blue;
+	/*  box-shadow: 0 0 0 3px #002525; // JUST ADD THIS LINE AND MODIFY YOUR COLOR*/
+	padding-right: 10px;
+	padding-left: 3px;
+	margin-left: 10px;
+	margin-right: 10px;
+	white-space: nowrap;
+}
+.changue{
+	margin-top:8px;
+	color:#ffffff;
+	text-align: center;
+	padding-right:15px;
+	}
+.changue a{
+	color:#ffffff;
+	}
+.cont-title {
+	background: url(../images/back-title.jpg) top center;
+	height: 500px;
+	width: 500px !important;
+	margin-top: -100px;
+	border-radius: 50%;
+	-webkit-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+.cont-logo {
+	background-color: rgba(51, 51, 51, 0.9) !important;
+	position: fixed !important;
+	margin: 0 auto !important;
+	width: 100%;
+	z-index: 50000;
+	top: 0;
+	left: 0;
+	box-shadow: 0px 4px 3px rgba(0,0,0, 0.5);
+	-webkit-transition: background-color 1s ease-in-out;
+	-moz-transition: background-color 1s ease-in-out;
+	-o-transition: background-color 1s ease-in-out;
+	transition: background-color 1s ease-in-out;
+}
+.container-outer {
+	overflow-x: scroll;
+	width: auto;
+	height: 60px;
+	overflow-y: hidden;
+}
+.container-inner {
+	width: 10000px;
+}
+.current-question {
+	background-color: #01AEBC;
+	color: white;
+}
+.footer {
+	margin-top: -10px;
+	background-color: #FFFFFF;
+	padding: 30px;
+	border-bottom: 5px solid #cc0000
+}
+.header {
+	background: url(../images/back-header.jpg) top center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	height: 350px;
+	color: #ffffff;
+	background-color: #ffffff;
+}
+.logo {
+	background-color: #cc0000;
+	text-align: center;
+	padding: 10px;
+	z-index: 50;
+	position: relative;
+}
+.login{
+	background-color:#cc0000;
+	padding:0 !important;
+	color:#ffffff;
+	text-align:center;
+	margin-top:100px;
+	border-radius: 40px 40px 0px 0px
+	}
+.login .form-group #UsuarioAcceso{
+	text-align:center;
+	background-image: url(../images/icon-user.png);
+	background-repeat:no-repeat;
+	background-size:45px;
+	margin: 0 auto;
+	width:80% !important;
+	height:45px;
+	}
+.login .form-group #UsuarioPassword{
+	text-align:center;
+	background-image: url(../images/icon-password.png);
+	background-repeat:no-repeat;
+	background-size:45px;
+	margin: 0 auto;
+	width:80% !important;
+	height:45px;
+	}
+
+.login a{
+	color:#FFFFFF}
+
+.logo-form{
+	margin-top:-60px;}
+	
+.menu-fixed {
+	position: fixed !important;
+	z-index: 1000;
+	top: 150px;
+	margin-left: 1%;/*max-width:1000px;*/
+}
+.navigation-color {
+	font-size: 40px;
+	color: #01AEBC;
+	text-align: center;
+}
+.question-not-viewed {
+	background-color: #FFFFFF;
+	color: black;
+}
+.question-viewed {
+	color: #00A5B5;
+	box-shadow: 0 0 0 3px #00A5B5;
+}
+.table-text {
+	background: url(../images/back-table.jpg) center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	color: #ffffff;
+	background-color: #ffffff;
+}
+.tit-form{
+	font-size:32px;
+	font-weight:200;
+	padding-bottom:10px;}
+.tit-form h1{
+	margin-bottom:-15px}
+.tit {
+	background-color: #cc0000;
+	background-blend-mode: multiply;
+	color: #ffffff;
+	text-align: center;
+	font-size: 28px;
+	line-height: 1;
+	padding: 20px;
+	font-weight: 200;
+	border-bottom: solid 5px #666666;
+	margin-top: -120px;
+}
+.text {
+	background-color: #ffffff;
+	margin-top: 0px;
+	padding: 80px 50px 20px;
+	font-size: 13px
+}
+
+
+/*.col-sm-3{display: inline-block;width:auto;}
+.c {
+
+  color: #64cbcd;
+  font-size: 11px;
+  border-radius: 50%;
+ // height: 30px;
+  width: 30px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  border-color: blue;
+   box-shadow: 0 0 0 3px #002525; // JUST ADD THIS LINE AND MODIFY YOUR COLOR
+  padding-right: 10px;
+  padding-left: 3px;
+    margin-left:10px;
+    margin-right:10px
+}
+*/
+@media (max-width: 767px) {
+.arrow-right {
+	width: 0;
+	height: 0;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-left: 15px solid #cc0000;
+	cursor: pointer;
+	margin-left: -10px;
+}
+.cont-title {
+	width: 100% !important;
+	height: 500px !important;
+	border-radius: 0px !important;
+}
+.menu-fixed {
+	position: fixed !important;
+	z-index: 1000;
+	top: 150px;
+	margin-left: -1%;/*max-width:1000px;*/
+}
+}

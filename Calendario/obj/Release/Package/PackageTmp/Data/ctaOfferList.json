@@ -1,0 +1,16 @@
+﻿ [
+    {"id": "1","name": "Brochure" ,"icon": "brochure.png"    },
+    {"id": "2","name": "Case study"  ,"icon": "case.png"  },
+    {"id": "3","name": "Ebook" ,"icon": "ebook.png"   },
+    {"id": "4","name": "Fact sheet" ,"icon": "fact.png"   },
+    { "id": "5", "name": "Infographic","icon": "info.png" },
+    { "id": "6", "name": "Interactive ebook", "icon": "interactive.png" },
+    { "id": "7", "name": "Landing Page" ,"icon": "microsite.png"},
+    { "id": "8", "name": "Live event","icon": "event.png" },
+    { "id": "9", "name": "Other","icon": "other.png" },
+    { "id": "10", "name": "Video","icon": "video.png" },
+    { "id": "11", "name": "Webinar", "icon": "webinar.png" },
+    { "id": "12", "name": "Webinar - On demand" ,"icon": "ondemand.png"},
+    { "id": "13", "name": "Whitepaper" ,"icon": "whitepaper.png"}
+]
+

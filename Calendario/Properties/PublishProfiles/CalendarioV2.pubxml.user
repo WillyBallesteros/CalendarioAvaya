@@ -1,0 +1,1225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo es utilizado por el proceso de paquete/publicación de nuestro proyecto Web. Puede personalizar el comportamiento de este proceso
+editando este archivo MSBuild. Para conocer más acerca de esto, visite http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Deploys\CalendarV2</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="assetsBackEnd/logos/120219-StandardHidraulica_logo.jpg">
+      <publishTime>04/24/2017 15:05:46</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/174333-santalogo.png">
+      <publishTime>04/24/2017 15:05:46</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/174354-mistrallogo.png">
+      <publishTime>04/24/2017 15:05:44</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/a-plus-icon.png">
+      <publishTime>04/24/2017 15:05:44</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/Accorhotels_logo_fr.jpg">
+      <publishTime>04/24/2017 15:05:42</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/acorhoteles-logo.png">
+      <publishTime>04/24/2017 15:05:42</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/actafarma-logo.png">
+      <publishTime>04/24/2017 15:05:40</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/Actafarma_Logo_430x450.jpg">
+      <publishTime>04/24/2017 15:05:40</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/Angel Mir - Portes Bisbal_Logo_430x450.jpg">
+      <publishTime>04/24/2017 15:05:40</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/angelmir-logo.png">
+      <publishTime>04/24/2017 15:05:38</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/aplus SRC logo 300 dpi.jpg">
+      <publishTime>04/24/2017 15:05:38</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/aplus-logo-rojo-e1436281908192.png">
+      <publishTime>04/24/2017 15:05:36</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/boiron-logo.png">
+      <publishTime>04/24/2017 15:05:36</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/bussiness-services-logo.png">
+      <publishTime>04/24/2017 15:05:34</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/CCOO_Logo_430x450.jpg">
+      <publishTime>04/24/2017 15:05:34</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/comisiones-obreras-logo.png">
+      <publishTime>04/24/2017 15:05:32</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/comunicaciones-c&amp;B-logo.png">
+      <publishTime>04/24/2017 15:05:32</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/crambo-logo.png">
+      <publishTime>04/24/2017 15:05:30</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/crambo.jpg">
+      <publishTime>04/24/2017 15:05:30</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/daunis-logo.png">
+      <publishTime>04/24/2017 15:05:28</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/Daunis_Logo_430x450.jpg">
+      <publishTime>04/24/2017 15:05:28</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/download.jpeg">
+      <publishTime>04/24/2017 15:05:26</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/ednon-logo.png">
+      <publishTime>04/24/2017 15:05:26</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/ednon_logo.gif">
+      <publishTime>04/24/2017 15:05:24</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/electroTEL.png">
+      <publishTime>04/24/2017 15:05:24</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/electrotel_logo.jpg">
+      <publishTime>04/24/2017 15:05:22</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/fereacion-valenciana-logo.png">
+      <publishTime>04/24/2017 15:05:20</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/FFCV_Logo_430x450.jpg">
+      <publishTime>04/24/2017 15:05:20</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/fidsud-logo.png">
+      <publishTime>04/24/2017 15:05:18</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/FIDSUD_logo.jpg">
+      <publishTime>04/24/2017 15:05:18</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/firma_2012.png">
+      <publishTime>04/24/2017 15:05:16</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/gesdocument-logo.png">
+      <publishTime>04/24/2017 15:05:14</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/gesdocument_logo.jpg">
+      <publishTime>04/24/2017 15:05:14</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/grimadlines-icon.png">
+      <publishTime>04/24/2017 15:05:12</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/GrimaldiLines_Logo_430x450.jpg">
+      <publishTime>04/24/2017 15:05:12</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/groupe-scopelec-68.jpg-68-350x350.jpg">
+      <publishTime>04/24/2017 15:05:10</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/groupe-scopelec-logo.jpg">
+      <publishTime>04/24/2017 15:05:10</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/grupo-scopelec-logo.png">
+      <publishTime>04/24/2017 15:05:08</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/infocom-logo.png">
+      <publishTime>04/24/2017 15:05:08</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/infocom.png">
+      <publishTime>04/24/2017 15:05:06</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/isolas-logo.png">
+      <publishTime>04/24/2017 15:05:06</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/isolas_logo_430x450v2.jpg">
+      <publishTime>04/24/2017 15:05:04</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/leader-logos.png">
+      <publishTime>04/24/2017 15:05:04</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/logo-1.png">
+      <publishTime>04/24/2017 15:05:02</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/logo-2.jpg">
+      <publishTime>04/24/2017 15:05:02</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/logo-3.jpg">
+      <publishTime>04/24/2017 15:05:00</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/logo-4.jpg">
+      <publishTime>04/24/2017 15:05:00</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/logo1.png">
+      <publishTime>04/24/2017 15:04:58</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/med-home-sol.png">
+      <publishTime>04/24/2017 15:04:58</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/MedHome_Logo_430x450.jpg">
+      <publishTime>04/24/2017 15:04:58</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/mistral-logo.png">
+      <publishTime>04/24/2017 15:04:56</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/nunsys-logo.png">
+      <publishTime>04/24/2017 15:04:56</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/orange_business_services.png">
+      <publishTime>04/24/2017 15:04:54</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/part-1.jpg">
+      <publishTime>04/24/2017 15:04:54</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/part-2.jpg">
+      <publishTime>04/24/2017 15:04:52</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/part-3.jpg">
+      <publishTime>04/24/2017 15:04:52</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/part-4.jpg">
+      <publishTime>04/24/2017 15:04:50</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/santa-logo.png">
+      <publishTime>04/24/2017 15:04:50</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/SCTrade_logo_450x430.jpg">
+      <publishTime>04/24/2017 15:04:48</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/SCTrade_logo_450x430.png">
+      <publishTime>04/24/2017 15:04:48</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/sergas_logo1.jpg">
+      <publishTime>04/24/2017 15:04:46</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/servicio-gallego.png">
+      <publishTime>04/24/2017 15:04:46</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/standard-logo.png">
+      <publishTime>04/24/2017 15:04:44</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/tellint-logo.png">
+      <publishTime>04/24/2017 15:04:42</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/telpym.jpg">
+      <publishTime>04/24/2017 15:04:42</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/telpymeser-logo.png">
+      <publishTime>04/24/2017 15:04:40</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/ticketmaster-logo.png">
+      <publishTime>04/24/2017 15:04:40</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/trade-center-logo.png">
+      <publishTime>04/24/2017 15:04:38</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/vinadeis-logo.png">
+      <publishTime>04/24/2017 15:04:38</publishTime>
+    </File>
+    <File Include="assetsBackEnd/logos/vinadeis_logo.jpg">
+      <publishTime>04/24/2017 15:04:36</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/.DS_Store">
+      <publishTime>04/24/2017 15:05:48</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/.gitignore">
+      <publishTime>04/24/2017 15:05:58</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/bower.help">
+      <publishTime>04/24/2017 15:05:54</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/bower.json">
+      <publishTime>04/24/2017 15:05:54</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/CHANGELOG.md">
+      <publishTime>04/24/2017 15:05:52</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/css/editor.sass">
+      <publishTime>04/24/2017 15:05:58</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/dev/index.html">
+      <publishTime>04/24/2017 15:06:00</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/dist/editor.min.css">
+      <publishTime>04/24/2017 15:06:02</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/dist/images/header-bg.gif">
+      <publishTime>04/24/2017 15:06:08</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/dist/images/header-bg.orig.gif">
+      <publishTime>04/24/2017 15:06:08</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/dist/images/icons.old.png">
+      <publishTime>04/24/2017 15:06:06</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/dist/images/icons.png">
+      <publishTime>04/24/2017 15:06:04</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/dist/images/logo.png">
+      <publishTime>04/24/2017 15:06:06</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/dist/images/resize.gif">
+      <publishTime>04/24/2017 15:06:04</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/dist/wysiwyg.min.js">
+      <publishTime>04/24/2017 15:06:00</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/gulpfile.js">
+      <publishTime>04/24/2017 15:05:52</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/images/header-bg.gif">
+      <publishTime>04/24/2017 15:06:16</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/images/header-bg.orig.gif">
+      <publishTime>04/24/2017 15:06:14</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/images/icons.old.png">
+      <publishTime>04/24/2017 15:06:12</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/images/icons.png">
+      <publishTime>04/24/2017 15:06:12</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/images/logo.png">
+      <publishTime>04/24/2017 15:06:10</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/images/resize.gif">
+      <publishTime>04/24/2017 15:06:10</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/js/wysiwyg.js">
+      <publishTime>04/24/2017 15:06:18</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/LICENSE.md">
+      <publishTime>04/24/2017 15:05:50</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/package.json">
+      <publishTime>04/24/2017 15:05:50</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/angularEditor/README.md">
+      <publishTime>04/24/2017 15:05:48</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/.DS_Store">
+      <publishTime>04/24/2017 15:06:32</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/dataTables.bootstrap.css">
+      <publishTime>04/24/2017 15:06:30</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/dataTables.bootstrap.js">
+      <publishTime>04/24/2017 15:06:30</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/dataTables.bootstrap.min.js">
+      <publishTime>04/24/2017 15:06:28</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/datatables.responsive.css">
+      <publishTime>04/24/2017 15:06:28</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/datatables.responsive.min.js">
+      <publishTime>04/24/2017 15:06:26</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/.DS_Store">
+      <publishTime>04/24/2017 15:06:34</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/.DS_Store">
+      <publishTime>04/24/2017 15:06:38</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/css/dataTables.responsive.css">
+      <publishTime>04/24/2017 15:06:40</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/css/dataTables.responsive.scss">
+      <publishTime>04/24/2017 15:06:42</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/child-rows/column-control.html">
+      <publishTime>04/24/2017 15:06:50</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/child-rows/custom-renderer.html">
+      <publishTime>04/24/2017 15:06:48</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/child-rows/disable-child-rows.html">
+      <publishTime>04/24/2017 15:06:48</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/child-rows/index.html">
+      <publishTime>04/24/2017 15:06:46</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/child-rows/right-column.html">
+      <publishTime>04/24/2017 15:06:46</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/child-rows/whole-row-control.html">
+      <publishTime>04/24/2017 15:06:44</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/display-control/auto.html">
+      <publishTime>04/24/2017 15:06:58</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/display-control/classes.html">
+      <publishTime>04/24/2017 15:06:56</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/display-control/complexHeader.html">
+      <publishTime>04/24/2017 15:06:56</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/display-control/fixedHeader.html">
+      <publishTime>04/24/2017 15:06:54</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/display-control/index.html">
+      <publishTime>04/24/2017 15:06:54</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/display-control/init-classes.html">
+      <publishTime>04/24/2017 15:06:52</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/index.html">
+      <publishTime>04/24/2017 15:06:44</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/initialisation/ajax.html">
+      <publishTime>04/24/2017 15:07:04</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/initialisation/className.html">
+      <publishTime>04/24/2017 15:07:02</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/initialisation/default.html">
+      <publishTime>04/24/2017 15:07:02</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/initialisation/index.html">
+      <publishTime>04/24/2017 15:07:00</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/initialisation/new.html">
+      <publishTime>04/24/2017 15:07:00</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/initialisation/option.html">
+      <publishTime>04/24/2017 15:06:58</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/styling/bootstrap.html">
+      <publishTime>04/24/2017 15:07:10</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/styling/compact.html">
+      <publishTime>04/24/2017 15:07:10</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/styling/foundation.html">
+      <publishTime>04/24/2017 15:07:08</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/styling/index.html">
+      <publishTime>04/24/2017 15:07:08</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/examples/styling/scrolling.html">
+      <publishTime>04/24/2017 15:07:04</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js">
+      <publishTime>04/24/2017 15:07:12</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js">
+      <publishTime>04/24/2017 15:07:12</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/License.txt">
+      <publishTime>04/24/2017 15:06:38</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/extensions/Responsive/Readme.md">
+      <publishTime>04/24/2017 15:06:34</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/images/sort_asc.png">
+      <publishTime>04/24/2017 15:07:18</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/images/sort_asc_disabled.png">
+      <publishTime>04/24/2017 15:07:16</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/images/sort_both.png">
+      <publishTime>04/24/2017 15:07:16</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/images/sort_desc.png">
+      <publishTime>04/24/2017 15:07:14</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/images/sort_desc_disabled.png">
+      <publishTime>04/24/2017 15:07:14</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/jquery.dataTables.css">
+      <publishTime>04/24/2017 15:06:24</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/jquery.dataTables.js">
+      <publishTime>04/24/2017 15:06:26</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/jquery.dataTables.min.css">
+      <publishTime>04/24/2017 15:06:20</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/jquery.dataTables.min.js">
+      <publishTime>04/24/2017 15:06:20</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/datatables/jquery.dataTables_themeroller.css">
+      <publishTime>04/24/2017 15:06:18</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/fastclick/fastclick.js">
+      <publishTime>04/24/2017 15:07:22</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/fastclick/fastclick.min.js">
+      <publishTime>04/24/2017 15:07:18</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/all.css">
+      <publishTime>04/24/2017 15:07:24</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/aero%402x.png">
+      <publishTime>04/24/2017 15:07:52</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/aero.css">
+      <publishTime>04/24/2017 15:07:56</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/aero.png">
+      <publishTime>04/24/2017 15:07:54</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/blue%402x.png">
+      <publishTime>04/24/2017 15:07:50</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/blue.css">
+      <publishTime>04/24/2017 15:07:52</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/blue.png">
+      <publishTime>04/24/2017 15:07:52</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/flat%402x.png">
+      <publishTime>04/24/2017 15:07:48</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/flat.css">
+      <publishTime>04/24/2017 15:07:48</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/flat.png">
+      <publishTime>04/24/2017 15:07:48</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/green%402x.png">
+      <publishTime>04/24/2017 15:07:44</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/green.css">
+      <publishTime>04/24/2017 15:07:46</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/green.png">
+      <publishTime>04/24/2017 15:07:44</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/grey%402x.png">
+      <publishTime>04/24/2017 15:07:42</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/grey.css">
+      <publishTime>04/24/2017 15:07:44</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/grey.png">
+      <publishTime>04/24/2017 15:07:42</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/orange%402x.png">
+      <publishTime>04/24/2017 15:07:38</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/orange.css">
+      <publishTime>04/24/2017 15:07:40</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/orange.png">
+      <publishTime>04/24/2017 15:07:40</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/pink%402x.png">
+      <publishTime>04/24/2017 15:07:36</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/pink.css">
+      <publishTime>04/24/2017 15:07:38</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/pink.png">
+      <publishTime>04/24/2017 15:07:36</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/purple%402x.png">
+      <publishTime>04/24/2017 15:07:34</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/purple.css">
+      <publishTime>04/24/2017 15:07:36</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/purple.png">
+      <publishTime>04/24/2017 15:07:34</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/red%402x.png">
+      <publishTime>04/24/2017 15:07:30</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/red.css">
+      <publishTime>04/24/2017 15:07:32</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/red.png">
+      <publishTime>04/24/2017 15:07:30</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/yellow%402x.png">
+      <publishTime>04/24/2017 15:07:26</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/yellow.css">
+      <publishTime>04/24/2017 15:07:28</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/yellow.png">
+      <publishTime>04/24/2017 15:07:28</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/flat/_all.css">
+      <publishTime>04/24/2017 15:07:26</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/futurico/futurico%402x.png">
+      <publishTime>04/24/2017 15:07:56</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/futurico/futurico.css">
+      <publishTime>04/24/2017 15:07:58</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/futurico/futurico.png">
+      <publishTime>04/24/2017 15:07:58</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/icheck.js">
+      <publishTime>04/24/2017 15:07:24</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/icheck.min.js">
+      <publishTime>04/24/2017 15:07:22</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/line/aero.css">
+      <publishTime>04/24/2017 15:08:12</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/line/blue.css">
+      <publishTime>04/24/2017 15:08:10</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/line/green.css">
+      <publishTime>04/24/2017 15:08:10</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/line/grey.css">
+      <publishTime>04/24/2017 15:08:08</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/line/line%402x.png">
+      <publishTime>04/24/2017 15:08:06</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/line/line.css">
+      <publishTime>04/24/2017 15:08:08</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/line/line.png">
+      <publishTime>04/24/2017 15:08:06</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/line/orange.css">
+      <publishTime>04/24/2017 15:08:04</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/line/pink.css">
+      <publishTime>04/24/2017 15:08:04</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/line/purple.css">
+      <publishTime>04/24/2017 15:08:02</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/line/red.css">
+      <publishTime>04/24/2017 15:08:02</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/line/yellow.css">
+      <publishTime>04/24/2017 15:08:00</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/line/_all.css">
+      <publishTime>04/24/2017 15:08:00</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/aero%402x.png">
+      <publishTime>04/24/2017 15:08:44</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/aero.css">
+      <publishTime>04/24/2017 15:08:46</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/aero.png">
+      <publishTime>04/24/2017 15:08:46</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/blue%402x.png">
+      <publishTime>04/24/2017 15:08:40</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/blue.css">
+      <publishTime>04/24/2017 15:08:44</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/blue.png">
+      <publishTime>04/24/2017 15:08:42</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/green%402x.png">
+      <publishTime>04/24/2017 15:08:38</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/green.css">
+      <publishTime>04/24/2017 15:08:40</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/green.png">
+      <publishTime>04/24/2017 15:08:38</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/grey%402x.png">
+      <publishTime>04/24/2017 15:08:34</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/grey.css">
+      <publishTime>04/24/2017 15:08:36</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/grey.png">
+      <publishTime>04/24/2017 15:08:34</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/minimal%402x.png">
+      <publishTime>04/24/2017 15:08:30</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/minimal.css">
+      <publishTime>04/24/2017 15:08:32</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/minimal.png">
+      <publishTime>04/24/2017 15:08:32</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/orange%402x.png">
+      <publishTime>04/24/2017 15:08:28</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/orange.css">
+      <publishTime>04/24/2017 15:08:28</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/orange.png">
+      <publishTime>04/24/2017 15:08:28</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/pink%402x.png">
+      <publishTime>04/24/2017 15:08:24</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/pink.css">
+      <publishTime>04/24/2017 15:08:26</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/pink.png">
+      <publishTime>04/24/2017 15:08:24</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/purple%402x.png">
+      <publishTime>04/24/2017 15:08:20</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/purple.css">
+      <publishTime>04/24/2017 15:08:22</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/purple.png">
+      <publishTime>04/24/2017 15:08:22</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/red%402x.png">
+      <publishTime>04/24/2017 15:08:16</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/red.css">
+      <publishTime>04/24/2017 15:08:20</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/red.png">
+      <publishTime>04/24/2017 15:08:18</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/yellow%402x.png">
+      <publishTime>04/24/2017 15:08:14</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/yellow.css">
+      <publishTime>04/24/2017 15:08:16</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/yellow.png">
+      <publishTime>04/24/2017 15:08:14</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/minimal/_all.css">
+      <publishTime>04/24/2017 15:08:12</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/polaris/polaris%402x.png">
+      <publishTime>04/24/2017 15:08:48</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/polaris/polaris.css">
+      <publishTime>04/24/2017 15:08:50</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/polaris/polaris.png">
+      <publishTime>04/24/2017 15:08:50</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/aero%402x.png">
+      <publishTime>04/24/2017 15:09:20</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/aero.css">
+      <publishTime>04/24/2017 15:09:20</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/aero.png">
+      <publishTime>04/24/2017 15:09:20</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/blue%402x.png">
+      <publishTime>04/24/2017 15:09:16</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/blue.css">
+      <publishTime>04/24/2017 15:09:18</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/blue.png">
+      <publishTime>04/24/2017 15:09:18</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/green%402x.png">
+      <publishTime>04/24/2017 15:09:14</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/green.css">
+      <publishTime>04/24/2017 15:09:16</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/green.png">
+      <publishTime>04/24/2017 15:09:14</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/grey%402x.png">
+      <publishTime>04/24/2017 15:09:10</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/grey.css">
+      <publishTime>04/24/2017 15:09:12</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/grey.png">
+      <publishTime>04/24/2017 15:09:12</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/orange%402x.png">
+      <publishTime>04/24/2017 15:09:08</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/orange.css">
+      <publishTime>04/24/2017 15:09:10</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/orange.png">
+      <publishTime>04/24/2017 15:09:08</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/pink%402x.png">
+      <publishTime>04/24/2017 15:09:06</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/pink.css">
+      <publishTime>04/24/2017 15:09:06</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/pink.png">
+      <publishTime>04/24/2017 15:09:06</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/purple%402x.png">
+      <publishTime>04/24/2017 15:09:02</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/purple.css">
+      <publishTime>04/24/2017 15:09:04</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/purple.png">
+      <publishTime>04/24/2017 15:09:04</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/red%402x.png">
+      <publishTime>04/24/2017 15:09:00</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/red.css">
+      <publishTime>04/24/2017 15:09:02</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/red.png">
+      <publishTime>04/24/2017 15:09:00</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/square%402x.png">
+      <publishTime>04/24/2017 15:08:58</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/square.css">
+      <publishTime>04/24/2017 15:09:00</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/square.png">
+      <publishTime>04/24/2017 15:08:58</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/yellow%402x.png">
+      <publishTime>04/24/2017 15:08:54</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/yellow.css">
+      <publishTime>04/24/2017 15:08:56</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/yellow.png">
+      <publishTime>04/24/2017 15:08:54</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/iCheck/square/_all.css">
+      <publishTime>04/24/2017 15:08:52</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/jQuery/jQuery-2.1.4.min.js">
+      <publishTime>04/24/2017 15:09:22</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/slimScroll/jquery.slimscroll.js">
+      <publishTime>04/24/2017 15:09:24</publishTime>
+    </File>
+    <File Include="assetsBackEnd/plugins/slimScroll/jquery.slimscroll.min.js">
+      <publishTime>04/24/2017 15:09:24</publishTime>
+    </File>
+    <File Include="assetsFrontEnd/css/.DS_Store">
+      <publishTime>04/24/2017 15:01:54</publishTime>
+    </File>
+    <File Include="assetsFrontEnd/css/bootstrap.css">
+      <publishTime>04/24/2017 15:01:52</publishTime>
+    </File>
+    <File Include="assetsFrontEnd/css/proxima-font.css">
+      <publishTime>04/24/2017 15:01:58</publishTime>
+    </File>
+    <File Include="assetsFrontEnd/css/styles.css">
+      <publishTime>04/24/2017 15:01:50</publishTime>
+    </File>
+    <File Include="assetsFrontEnd/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>04/24/2017 15:02:02</publishTime>
+    </File>
+    <File Include="assetsFrontEnd/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>04/24/2017 15:02:00</publishTime>
+    </File>
+    <File Include="assetsFrontEnd/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>04/24/2017 15:02:00</publishTime>
+    </File>
+    <File Include="assetsFrontEnd/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>04/24/2017 15:01:58</publishTime>
+    </File>
+    <File Include="assetsFrontEnd/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>04/24/2017 15:01:56</publishTime>
+    </File>
+    <File Include="assetsFrontEnd/img/arrow.png">
+      <publishTime>04/24/2017 15:02:12</publishTime>
+    </File>
+    <File Include="assetsFrontEnd/img/avaya-logo-08.png">
+      <publishTime>04/24/2017 15:02:12</publishTime>
+    </File>
+    <File Include="assetsFrontEnd/img/bg-header.png">
+      <publishTime>04/24/2017 15:02:10</publishTime>
+    </File>
+    <File Include="assetsFrontEnd/img/bg-headerBlitz.png">
+      <publishTime>04/24/2017 15:02:10</publishTime>
+    </File>
+    <File Include="assetsFrontEnd/img/bullet.jpg">
+      <publishTime>04/24/2017 15:02:08</publishTime>
+    </File>
+    <File Include="assetsFrontEnd/img/cal-01.png">
+      <publishTime>04/24/2017 15:02:04</publishTime>
+    </File>
+    <File Include="assetsFrontEnd/img/cal-02.png">
+      <publishTime>04/24/2017 15:02:04</publishTime>
+    </File>
+    <File Include="assetsFrontEnd/img/MCS-logo.png">
+      <publishTime>04/24/2017 15:02:02</publishTime>
+    </File>
+    <File Include="assetsFrontEnd/img/Thumbs.db">
+      <publishTime>04/24/2017 14:45:54</publishTime>
+    </File>
+    <File Include="assetsFrontEnd/js/bootstrap.js">
+      <publishTime>04/24/2017 15:02:14</publishTime>
+    </File>
+    <File Include="assetsFrontEnd/js/jquery-1.11.2.min.js">
+      <publishTime>04/24/2017 15:02:14</publishTime>
+    </File>
+    <File Include="BackEnd.html">
+      <publishTime>04/24/2017 15:00:06</publishTime>
+    </File>
+    <File Include="BackEndBlitz.html">
+      <publishTime>04/24/2017 15:00:08</publishTime>
+    </File>
+    <File Include="bin/Calendario.dll">
+      <publishTime>05/03/2017 13:41:19</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>04/24/2017 14:54:54</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>04/24/2017 14:54:54</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/24/2017 14:52:44</publishTime>
+    </File>
+    <File Include="Calendar.html">
+      <publishTime>04/24/2017 15:00:10</publishTime>
+    </File>
+    <File Include="CalendarBlitz.html">
+      <publishTime>04/24/2017 15:00:10</publishTime>
+    </File>
+    <File Include="CalendarCampsBlitz.html">
+      <publishTime>04/24/2017 15:00:08</publishTime>
+    </File>
+    <File Include="Data/businessSegmentList.json">
+      <publishTime>04/24/2017 14:45:54</publishTime>
+    </File>
+    <File Include="Data/businessUnitList.json">
+      <publishTime>04/24/2017 14:45:54</publishTime>
+    </File>
+    <File Include="Data/ctaOfferList.json">
+      <publishTime>04/24/2017 14:45:54</publishTime>
+    </File>
+    <File Include="Data/languagesList.json">
+      <publishTime>04/24/2017 14:45:54</publishTime>
+    </File>
+    <File Include="Data/subAreasList.json">
+      <publishTime>05/03/2017 09:16:48</publishTime>
+    </File>
+    <File Include="Data/tacticList.json">
+      <publishTime>04/24/2017 14:45:54</publishTime>
+    </File>
+    <File Include="Data/targetAudienceList.json">
+      <publishTime>04/24/2017 14:45:54</publishTime>
+    </File>
+    <File Include="Data/theaterList.json">
+      <publishTime>04/24/2017 14:45:54</publishTime>
+    </File>
+    <File Include="Data/verticalsList.json">
+      <publishTime>04/24/2017 14:45:54</publishTime>
+    </File>
+    <File Include="Datos/ModelCalendar.edmx.diagram">
+      <publishTime>04/25/2017 09:50:08</publishTime>
+    </File>
+    <File Include="images/back-header.jpg">
+      <publishTime>04/24/2017 14:45:56</publishTime>
+    </File>
+    <File Include="images/back-table.jpg">
+      <publishTime>04/24/2017 14:45:56</publishTime>
+    </File>
+    <File Include="images/back-title.jpg">
+      <publishTime>04/24/2017 14:45:56</publishTime>
+    </File>
+    <File Include="images/blog.png">
+      <publishTime>04/24/2017 14:45:56</publishTime>
+    </File>
+    <File Include="images/brochure.png">
+      <publishTime>04/24/2017 14:45:56</publishTime>
+    </File>
+    <File Include="images/case.png">
+      <publishTime>04/24/2017 14:45:56</publishTime>
+    </File>
+    <File Include="images/com.png">
+      <publishTime>04/24/2017 14:45:56</publishTime>
+    </File>
+    <File Include="images/ebook.png">
+      <publishTime>04/24/2017 14:45:56</publishTime>
+    </File>
+    <File Include="images/event.png">
+      <publishTime>04/24/2017 14:45:56</publishTime>
+    </File>
+    <File Include="images/fact.png">
+      <publishTime>04/24/2017 14:45:56</publishTime>
+    </File>
+    <File Include="images/gears32.gif">
+      <publishTime>04/24/2017 14:45:56</publishTime>
+    </File>
+    <File Include="images/icon-form.png">
+      <publishTime>04/24/2017 14:45:56</publishTime>
+    </File>
+    <File Include="images/info.png">
+      <publishTime>04/24/2017 14:45:56</publishTime>
+    </File>
+    <File Include="images/interactive.png">
+      <publishTime>04/24/2017 14:45:56</publishTime>
+    </File>
+    <File Include="images/logo-white.png">
+      <publishTime>04/24/2017 14:45:56</publishTime>
+    </File>
+    <File Include="images/microsite.png">
+      <publishTime>04/24/2017 14:45:56</publishTime>
+    </File>
+    <File Include="images/ondemand.png">
+      <publishTime>04/24/2017 14:45:56</publishTime>
+    </File>
+    <File Include="images/other.png">
+      <publishTime>04/24/2017 14:45:56</publishTime>
+    </File>
+    <File Include="images/video.png">
+      <publishTime>04/24/2017 14:45:56</publishTime>
+    </File>
+    <File Include="images/webinar.png">
+      <publishTime>04/24/2017 14:45:56</publishTime>
+    </File>
+    <File Include="images/whitepaper.png">
+      <publishTime>04/24/2017 14:45:56</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>04/24/2017 15:00:06</publishTime>
+    </File>
+    <File Include="js/ajaxFileUpload.js">
+      <publishTime>04/24/2017 15:00:40</publishTime>
+    </File>
+    <File Include="js/angular/angular-route.min.js">
+      <publishTime>04/24/2017 15:00:54</publishTime>
+    </File>
+    <File Include="js/angular/angular-route.min.js.map">
+      <publishTime>04/24/2017 15:00:52</publishTime>
+    </File>
+    <File Include="js/angular/angular-sanitize.min.js">
+      <publishTime>04/24/2017 15:00:52</publishTime>
+    </File>
+    <File Include="js/angular/angular-sanitize.min.js.map">
+      <publishTime>04/24/2017 15:00:50</publishTime>
+    </File>
+    <File Include="js/angular/angular.min.js">
+      <publishTime>04/24/2017 15:00:48</publishTime>
+    </File>
+    <File Include="js/angular/angular.min.js.map">
+      <publishTime>04/24/2017 15:00:50</publishTime>
+    </File>
+    <File Include="js/angular/angularPrint.css">
+      <publishTime>04/24/2017 15:00:44</publishTime>
+    </File>
+    <File Include="js/angular/angularPrint.js">
+      <publishTime>04/24/2017 15:00:42</publishTime>
+    </File>
+    <File Include="js/angular/ng-tags-input.js">
+      <publishTime>04/24/2017 15:00:42</publishTime>
+    </File>
+    <File Include="js/app/addCampaignController.js">
+      <publishTime>04/24/2017 15:01:06</publishTime>
+    </File>
+    <File Include="js/app/calendarBackEndApp.js">
+      <publishTime>04/24/2017 15:01:06</publishTime>
+    </File>
+    <File Include="js/app/calendarBackEndController.js">
+      <publishTime>04/24/2017 15:01:04</publishTime>
+    </File>
+    <File Include="js/app/calendarBackEndModel.js">
+      <publishTime>04/24/2017 15:01:04</publishTime>
+    </File>
+    <File Include="js/app/calendarController.js">
+      <publishTime>04/24/2017 15:01:02</publishTime>
+    </File>
+    <File Include="js/app/cloneCampaignController.js">
+      <publishTime>04/24/2017 15:01:02</publishTime>
+    </File>
+    <File Include="js/app/feedbackController.js">
+      <publishTime>04/24/2017 15:01:00</publishTime>
+    </File>
+    <File Include="js/app/indexApp.js">
+      <publishTime>04/24/2017 15:01:00</publishTime>
+    </File>
+    <File Include="js/app/indexController.js">
+      <publishTime>04/24/2017 15:00:58</publishTime>
+    </File>
+    <File Include="js/app/indexModel.js">
+      <publishTime>04/24/2017 15:00:58</publishTime>
+    </File>
+    <File Include="js/app/masterHome.js">
+      <publishTime>04/24/2017 15:00:56</publishTime>
+    </File>
+    <File Include="js/app/updateCampaignController.js">
+      <publishTime>04/24/2017 15:00:56</publishTime>
+    </File>
+    <File Include="js/app/usersController.js">
+      <publishTime>04/24/2017 15:00:54</publishTime>
+    </File>
+    <File Include="js/appFront/calendarFrontEndApp.js">
+      <publishTime>04/24/2017 15:01:12</publishTime>
+    </File>
+    <File Include="js/appFront/calendarFrontEndController - Copia.js">
+      <publishTime>04/24/2017 15:01:12</publishTime>
+    </File>
+    <File Include="js/appFront/calendarFrontEndController.js">
+      <publishTime>04/24/2017 15:01:10</publishTime>
+    </File>
+    <File Include="js/appFront/calendarFrontEndModel.js">
+      <publishTime>04/24/2017 15:01:10</publishTime>
+    </File>
+    <File Include="js/blitzBack/addCampaignController.js">
+      <publishTime>04/25/2017 10:42:58</publishTime>
+    </File>
+    <File Include="js/blitzBack/calendarBackEndApp.js">
+      <publishTime>04/24/2017 15:01:20</publishTime>
+    </File>
+    <File Include="js/blitzBack/calendarBackEndController.js">
+      <publishTime>04/25/2017 11:02:16</publishTime>
+    </File>
+    <File Include="js/blitzBack/calendarBackEndModel.js">
+      <publishTime>04/24/2017 15:01:18</publishTime>
+    </File>
+    <File Include="js/blitzBack/calendarController.js">
+      <publishTime>04/24/2017 15:01:18</publishTime>
+    </File>
+    <File Include="js/blitzBack/cloneCampaignController.js">
+      <publishTime>04/24/2017 15:01:16</publishTime>
+    </File>
+    <File Include="js/blitzBack/feedbackController.js">
+      <publishTime>04/24/2017 15:01:16</publishTime>
+    </File>
+    <File Include="js/blitzBack/updateCampaignController.js">
+      <publishTime>04/24/2017 15:01:16</publishTime>
+    </File>
+    <File Include="js/blitzBack/usersController.js">
+      <publishTime>04/24/2017 15:01:14</publishTime>
+    </File>
+    <File Include="js/blitzFront/calendarBlitzApp.js">
+      <publishTime>04/24/2017 15:01:24</publishTime>
+    </File>
+    <File Include="js/blitzFront/CalendarBlitzController.js">
+      <publishTime>04/24/2017 15:58:04</publishTime>
+    </File>
+    <File Include="js/blitzFront/calendarBlitzModel.js">
+      <publishTime>04/24/2017 15:59:06</publishTime>
+    </File>
+    <File Include="js/bootbox.min.js">
+      <publishTime>04/24/2017 15:00:38</publishTime>
+    </File>
+    <File Include="js/bootstrap-multiselect.js">
+      <publishTime>04/24/2017 15:00:40</publishTime>
+    </File>
+    <File Include="js/bootstrap.js">
+      <publishTime>04/24/2017 15:00:36</publishTime>
+    </File>
+    <File Include="js/bootstrap.min.js">
+      <publishTime>04/24/2017 15:00:34</publishTime>
+    </File>
+    <File Include="js/campBlitzFront/calendarCampBlitzApp.js">
+      <publishTime>04/24/2017 15:01:28</publishTime>
+    </File>
+    <File Include="js/campBlitzFront/CalendarCampBlitzController.js">
+      <publishTime>04/25/2017 09:17:18</publishTime>
+    </File>
+    <File Include="js/campBlitzFront/calendarCampBlitzModel.js">
+      <publishTime>04/25/2017 09:18:30</publishTime>
+    </File>
+    <File Include="js/ckEditor.js">
+      <publishTime>04/24/2017 15:00:34</publishTime>
+    </File>
+    <File Include="js/FileSaver.js">
+      <publishTime>04/24/2017 15:00:30</publishTime>
+    </File>
+    <File Include="js/FileSaver.min.js">
+      <publishTime>04/24/2017 15:00:28</publishTime>
+    </File>
+    <File Include="js/html2canvas.min.js">
+      <publishTime>04/24/2017 15:00:28</publishTime>
+    </File>
+    <File Include="js/ie-emulation-modes-warning.js">
+      <publishTime>04/24/2017 15:00:26</publishTime>
+    </File>
+    <File Include="js/ie10-viewport-bug-workaround.js">
+      <publishTime>04/24/2017 15:00:24</publishTime>
+    </File>
+    <File Include="js/jquery.dd.min.js">
+      <publishTime>04/24/2017 15:00:24</publishTime>
+    </File>
+    <File Include="js/jquery.js">
+      <publishTime>04/24/2017 15:00:22</publishTime>
+    </File>
+    <File Include="js/jquery.min.js">
+      <publishTime>04/24/2017 15:00:22</publishTime>
+    </File>
+    <File Include="js/npm.js">
+      <publishTime>04/24/2017 15:00:20</publishTime>
+    </File>
+    <File Include="js/tableExport.js">
+      <publishTime>04/24/2017 15:00:18</publishTime>
+    </File>
+    <File Include="js/tableExport.min.js">
+      <publishTime>04/24/2017 15:00:16</publishTime>
+    </File>
+    <File Include="MailsTemplates/passwordPerdido.html">
+      <publishTime>04/24/2017 15:01:50</publishTime>
+    </File>
+    <File Include="MailsTemplates/solicitudUsuarioAdmin.html">
+      <publishTime>04/24/2017 15:01:48</publishTime>
+    </File>
+    <File Include="MailsTemplates/solicitudUsuarioCliente.html">
+      <publishTime>04/24/2017 15:01:48</publishTime>
+    </File>
+    <File Include="MailsTemplates/Telesales-Agent-ToolKit.html">
+      <publishTime>04/24/2017 15:01:46</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/24/2017 14:54:58</publishTime>
+    </File>
+    <File Include="ServiciosWeb/CalendarService.asmx">
+      <publishTime>04/24/2017 14:46:02</publishTime>
+    </File>
+    <File Include="ServiciosWeb/UsuariosService.asmx">
+      <publishTime>04/24/2017 14:46:02</publishTime>
+    </File>
+    <File Include="views/backend/addCampaign.html">
+      <publishTime>04/24/2017 15:01:38</publishTime>
+    </File>
+    <File Include="views/backend/calendar.html">
+      <publishTime>04/24/2017 15:01:38</publishTime>
+    </File>
+    <File Include="views/backend/cloneCampaign.html">
+      <publishTime>04/24/2017 15:01:36</publishTime>
+    </File>
+    <File Include="views/backend/details.html">
+      <publishTime>04/24/2017 15:01:34</publishTime>
+    </File>
+    <File Include="views/backend/feedback.html">
+      <publishTime>04/24/2017 15:01:34</publishTime>
+    </File>
+    <File Include="views/backend/listaCampaigns.html">
+      <publishTime>04/24/2017 15:01:32</publishTime>
+    </File>
+    <File Include="views/backend/updateCampaign.html">
+      <publishTime>04/24/2017 15:01:30</publishTime>
+    </File>
+    <File Include="views/backend/users.html">
+      <publishTime>04/24/2017 15:01:30</publishTime>
+    </File>
+    <File Include="views/backEndBlitz/listaCampaigns.html">
+      <publishTime>04/25/2017 10:42:18</publishTime>
+    </File>
+    <File Include="views/frontend/calendar - Copia.html">
+      <publishTime>04/24/2017 15:01:44</publishTime>
+    </File>
+    <File Include="views/frontend/calendar.html">
+      <publishTime>04/24/2017 15:01:42</publishTime>
+    </File>
+    <File Include="views/frontend/calendarBlitz.html">
+      <publishTime>04/24/2017 15:51:28</publishTime>
+    </File>
+    <File Include="views/frontend/calendarCampBlitz.html">
+      <publishTime>04/25/2017 09:16:12</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/03/2017 13:41:21</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

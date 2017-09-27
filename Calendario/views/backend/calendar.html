@@ -1,0 +1,369 @@
+﻿<div id="calendarController">
+<section class="content-header">
+    <div class="row">
+        <div class="col-sm-6">
+            <h3 id="titleStatus">
+                CAMPAIGNS CALENDAR - MY TACTICS/PROGRAMS
+            </h3>
+        </div>
+        <div class="col-sm-6">
+            <button type="button" ng-click="addCampaign()" class="btn btn-danger" style="max-width: 250px; float: right; margin-top: 15px; margin-right: 5px;">Add new tactic/program</button>
+        </div>
+    </div>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-sm-4 text-right hide-custom">
+                            <div class="pre-month" ng-click="getEventsByMonthYear(navMonth.back)">{{ navMonth.back | cmdate:'MMM' }} - {{ navMonth.back | cmQ }}</div>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <form>
+                                <select class="month" ng-change="getEventsByMonthYear()" ng-model="dateSelected">
+                                    <option ng-repeat="month in navMonth.current" value="{{month.date | cmdate:'yyyy/MM/dd'}}" ng-selected="{{month.selected == true}}">{{month.date | cmdate:'MMM' }} - {{month.date | cmQ }}</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="col-sm-4 text-left hide-custom">
+                            <div class="post-month" ng-click="getEventsByMonthYear(navMonth.next)">{{ navMonth.next | cmdate:'MMM' }} - {{ navMonth.next | cmQ }}</div>
+                        </div>
+                    </div>
+                    <table class="calendar" cellpadding="0" cellspacing="0" border="0">
+                        <tr class="days">
+                            <!--<td valign="top" class="sunday"></td>-->
+                            <td valign="top" class="monday"></td>
+                            <td valign="top" class="tuesday"></td>
+                            <td valign="top" class="wednesday"></td>
+                            <td valign="top" class="thursday"></td>
+                            <td valign="top" class="friday"></td>
+                            <!--<td valign="top" class="saturday"></td>-->
+                        </tr>
+                    </table>
+                    <table class="calendar dates" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td ng-repeat="day in semana1" valign="top" ng-if="day.Weekend == 'NO'" ng-class="{ 'weekend' : day.Weekend == 'YES', 'other-month' : day.ActualMonth == 'NO' }">
+                                <div class="date">{{day.Day}}</div>
+                                <div ng-show="day.Events.length < 3">
+                                    <div ng-repeat="ev in day.Events" class="tactic" ng-click="showDetails(ev)" ng-style="ev.businessSegment === 'All' && {'background-color': '#cccccc'} || ev.businessSegment === 'Enterprise' && {'background-color': '#b4fcee'} || ev.businessSegment === 'Midmarket' && {'background-color': '#d0e9fc'} || ev.businessSegment === 'SMB' && {'background-color': '#ffe9d4'}">
+                                        <div class="tactic-type">
+                                            <img ng-src="images/{{ev.programInitials}}" alt="{{ev.programInitials}}" />
+                                        </div>
+                                        <div class="tactic-name">
+                                            {{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div ng-show="day.Events.length >= 3">
+                                    <div ng-repeat="ev in day.Events | limitTo:2" class="tactic" ng-click="showDetails(ev)" ng-style="ev.businessSegment === 'All' && {'background-color': '#cccccc'} || ev.businessSegment === 'Enterprise' && {'background-color': '#b4fcee'} || ev.businessSegment === 'Midmarket' && {'background-color': '#d0e9fc'} || ev.businessSegment === 'SMB' && {'background-color': '#ffe9d4'}">
+                                        <div class="tactic-type">
+                                            <img ng-src="images/{{ev.programInitials}}" alt="{{ev.programInitials}}" />
+                                        </div>
+                                        <div class="tactic-name">
+                                            {{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+                                        </div>
+                                    </div>
+                                    <div class="more" ng-click="showEvents(day.Events)"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td ng-repeat="day in semana2" valign="top" ng-if="day.Weekend == 'NO'" ng-class="{ 'weekend' : day.Weekend == 'YES', 'other-month' : day.ActualMonth == 'NO' }">
+                                <div class="date">{{day.Day}}</div>
+                                <div ng-show="day.Events.length < 3">
+                                    <div ng-repeat="ev in day.Events" class="tactic" ng-click="showDetails(ev)" ng-style="ev.businessSegment === 'All' && {'background-color': '#cccccc'} || ev.businessSegment === 'Enterprise' && {'background-color': '#b4fcee'} || ev.businessSegment === 'Midmarket' && {'background-color': '#d0e9fc'} || ev.businessSegment === 'SMB' && {'background-color': '#ffe9d4'}">
+                                        <div class="tactic-type">
+                                            <img ng-src="images/{{ev.programInitials}}" alt="{{ev.programInitials}}" />
+                                        </div>
+                                        <div class="tactic-name">
+                                            {{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div ng-show="day.Events.length >= 3">
+                                    <div ng-repeat="ev in day.Events | limitTo:2" class="tactic" ng-click="showDetails(ev)" ng-style="ev.businessSegment === 'All' && {'background-color': '#cccccc'} || ev.businessSegment === 'Enterprise' && {'background-color': '#b4fcee'} || ev.businessSegment === 'Midmarket' && {'background-color': '#d0e9fc'} || ev.businessSegment === 'SMB' && {'background-color': '#ffe9d4'}">
+                                        <div class="tactic-type">
+                                            <img ng-src="images/{{ev.programInitials}}" alt="{{ev.programInitials}}" />
+                                        </div>
+                                        <div class="tactic-name">
+                                            {{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+                                        </div>
+                                    </div>
+                                    <div class="more" ng-click="showEvents(day.Events)"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td ng-repeat="day in semana3" valign="top" ng-if="day.Weekend == 'NO'" ng-class="{ 'weekend' : day.Weekend == 'YES', 'other-month' : day.ActualMonth == 'NO' }">
+                                <div class="date">{{day.Day}}</div>
+                                <div ng-show="day.Events.length < 3">
+                                    <div ng-repeat="ev in day.Events" class="tactic" ng-click="showDetails(ev)" ng-style="ev.businessSegment === 'All' && {'background-color': '#cccccc'} || ev.businessSegment === 'Enterprise' && {'background-color': '#b4fcee'} || ev.businessSegment === 'Midmarket' && {'background-color': '#d0e9fc'} || ev.businessSegment === 'SMB' && {'background-color': '#ffe9d4'}">
+                                        <div class="tactic-type">
+                                            <img ng-src="images/{{ev.programInitials}}" alt="{{ev.programInitials}}" />
+                                        </div>
+                                        <div class="tactic-name">
+                                            {{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div ng-show="day.Events.length >= 3">
+                                    <div ng-repeat="ev in day.Events | limitTo:2" class="tactic" ng-click="showDetails(ev)" ng-style="ev.businessSegment === 'All' && {'background-color': '#cccccc'} || ev.businessSegment === 'Enterprise' && {'background-color': '#b4fcee'} || ev.businessSegment === 'Midmarket' && {'background-color': '#d0e9fc'} || ev.businessSegment === 'SMB' && {'background-color': '#ffe9d4'}">
+                                        <div class="tactic-type">
+                                            <img ng-src="images/{{ev.programInitials}}" alt="{{ev.programInitials}}" />
+                                        </div>
+                                        <div class="tactic-name">
+                                            {{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+                                        </div>
+                                    </div>
+                                    <div class="more" ng-click="showEvents(day.Events)"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td ng-repeat="day in semana4" valign="top" ng-if="day.Weekend == 'NO'" ng-class="{ 'weekend' : day.Weekend == 'YES', 'other-month' : day.ActualMonth == 'NO' }">
+                                <div class="date">{{day.Day}}</div>
+                                <div ng-show="day.Events.length < 3">
+                                    <div ng-repeat="ev in day.Events" class="tactic" ng-click="showDetails(ev)" ng-style="ev.businessSegment === 'All' && {'background-color': '#cccccc'} || ev.businessSegment === 'Enterprise' && {'background-color': '#b4fcee'} || ev.businessSegment === 'Midmarket' && {'background-color': '#d0e9fc'} || ev.businessSegment === 'SMB' && {'background-color': '#ffe9d4'}">
+                                        <div class="tactic-type">
+                                            <img ng-src="images/{{ev.programInitials}}" alt="{{ev.programInitials}}" />
+                                        </div>
+                                        <div class="tactic-name">
+                                            {{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div ng-show="day.Events.length >= 3">
+                                    <div ng-repeat="ev in day.Events | limitTo:2" class="tactic" ng-click="showDetails(ev)" ng-style="ev.businessSegment === 'All' && {'background-color': '#cccccc'} || ev.businessSegment === 'Enterprise' && {'background-color': '#b4fcee'} || ev.businessSegment === 'Midmarket' && {'background-color': '#d0e9fc'} || ev.businessSegment === 'SMB' && {'background-color': '#ffe9d4'}">
+
+                                        <div class="tactic-type">
+                                            <img ng-src="images/{{ev.programInitials}}" alt="{{ev.programInitials}}" />
+                                        </div>
+                                        <div class="tactic-name">
+                                            {{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+                                        </div>
+                                    </div>
+                                    <div class="more" ng-click="showEvents(day.Events)"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td ng-repeat="day in semana5" valign="top" ng-if="day.Weekend == 'NO'" ng-class="{ 'weekend' : day.Weekend == 'YES', 'other-month' : day.ActualMonth == 'NO' }">
+                                <div class="date">{{day.Day}}</div>
+                                <div ng-show="day.Events.length < 3">
+                                    <div ng-repeat="ev in day.Events" class="tactic" ng-click="showDetails(ev)" ng-style="ev.businessSegment === 'All' && {'background-color': '#cccccc'} || ev.businessSegment === 'Enterprise' && {'background-color': '#b4fcee'} || ev.businessSegment === 'Midmarket' && {'background-color': '#d0e9fc'} || ev.businessSegment === 'SMB' && {'background-color': '#ffe9d4'}">
+                                        <div class="tactic-type">
+                                            <img ng-src="images/{{ev.programInitials}}" alt="{{ev.programInitials}}" />
+                                        </div>
+                                        <div class="tactic-name">
+                                            {{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div ng-show="day.Events.length >= 3">
+                                    <div ng-repeat="ev in day.Events | limitTo:2" class="tactic" ng-click="showDetails(ev)" ng-style="ev.businessSegment === 'All' && {'background-color': '#cccccc'} || ev.businessSegment === 'Enterprise' && {'background-color': '#b4fcee'} || ev.businessSegment === 'Midmarket' && {'background-color': '#d0e9fc'} || ev.businessSegment === 'SMB' && {'background-color': '#ffe9d4'}">
+                                        <div class="tactic-type">
+                                            <img ng-src="images/{{ev.programInitials}}" alt="{{ev.programInitials}}" />
+                                        </div>
+                                        <div class="tactic-name">
+                                            {{ev.campaignName}}&nbsp;{{ev.tacticName}}&nbsp;{{ev.ctaOffer}}
+                                        </div>
+                                    </div>
+                                    <div class="more" ng-click="showEvents(day.Events)"></div>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+            
+            </div><!-- /.box -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</section><!-- /.content -->
+
+
+<!--Modal Campaña-->
+<div id="modaltactic" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">{{actualEvent.campaignName}}</h4>
+            </div>
+            <div class="modal-body">
+                <div class="modal-tactic">
+                    <div class="row modal-tactic-row">
+                        <div class="col-sm-6">
+                            <strong>CAMPAIGN OWNER</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            {{actualEvent.UsuarioNombre}}&nbsp;
+                        </div>
+                        <div class="col-sm-6">
+                            <strong>CAMPAIGN </strong>
+                        </div>
+                        <div class="col-sm-6">
+                            {{actualEvent.campaignName}}&nbsp;
+                        </div>
+                        <div class="col-sm-6">
+                            <strong>PROGRAM</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            {{actualEvent.programName}}&nbsp;
+                        </div>
+                        <div class="col-sm-6">
+                            <strong>SOLUTION  </strong>
+                        </div>
+                        <div class="col-sm-6">
+                            {{actualEvent.businessUnit}}&nbsp;
+                        </div>
+                        <div class="col-sm-6">
+                            <strong>BUSINESS SEGMENT</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            {{actualEvent.businessSegment}}&nbsp;
+                        </div>
+                        <div class="col-sm-6">
+                            <strong>VERTICAL</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            {{actualEvent.vertical}}&nbsp;
+                        </div>
+                        <div class="col-sm-6">
+                            <strong>TARGET AUDIENCE</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            {{actualEvent.targetAudience}}&nbsp;
+                        </div>
+                        <div class="col-sm-6">
+                            <strong>TACTIC</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            {{actualEvent.tacticName}}&nbsp;
+                        </div>
+                        <div class="col-sm-6">
+                            <strong>TACTIC STAGE</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            {{actualEvent.tacticStage}}&nbsp;
+                        </div>
+                        <div class="col-sm-6">
+                            <strong>CTA</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            {{actualEvent.ctaOffer}}&nbsp;
+                        </div>
+                        <div class="col-sm-6">
+                            <strong>TACTIC START DATE</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            {{actualEvent.dateStart | cmdate:'MMM dd - yyyy'}}&nbsp;
+                        </div>
+                        <div class="col-sm-6">
+                            <strong>TACTIC END DATE</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            {{actualEvent.dateEnd | cmdate:'MMM dd - yyyy'}}&nbsp;
+                        </div>
+                        <div class="col-sm-6">
+                            <strong>THEATER</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            {{actualEvent.theater}}&nbsp;
+                        </div>
+                        <div class="col-sm-6">
+                            <strong>REGION </strong>
+                        </div>
+                        <div class="col-sm-6">
+                            {{actualEvent.subArea}}&nbsp;
+                        </div>
+                        <div class="col-sm-6">
+                            <strong>LANGUAGE</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            {{actualEvent.languages}}&nbsp;
+                        </div>
+                        <div class="col-sm-6">
+                            <strong>SFDC CAMPAIGN NAME</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            {{actualEvent.sfdcCampaignName}}&nbsp;
+                        </div>
+                        <div class="col-sm-6">
+                            <strong>SFDC DASHBOARD LINK</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            <a ng-href="{{actualEvent.sfdcDashboardLink}}" href="" target="_blank">{{actualEvent.sfdcDashboardLink}}</a>&nbsp;
+                        </div>
+                        <div class="col-sm-6">
+                            <strong>PROMOCODE</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            {{actualEvent.promocode}}&nbsp;
+                        </div>
+                        <div class="col-sm-6">
+                            <strong>AGENCY</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            {{actualEvent.agencyInternal}}&nbsp;
+                        </div>
+                        <div class="col-sm-6">
+                            <strong>GENERAL COMMENTS</strong>
+                        </div>
+                        <div class="col-sm-6">
+                            {{actualEvent.comments}}&nbsp;
+                        </div>    
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default modal-btn-close" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--FIN - Modal Campaña-->
+<!--Modal Varias Campañas -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">{{ dayEvents[0].dateStart | cmdate:'MMM dd' }} - {{ dayEvents[0].dateStart | cmQ }}</h4>
+            </div>
+            <div class="modal-body">
+                <div class="modal-tactic" ng-repeat="event in dayEvents">
+                    <div class="tactic-type modal-tactic-type">
+                        {{event.programInitials}}
+                    </div><br>
+                    <div class="row modal-tactic-row">
+                        <div class="col-sm-4">
+                            <strong>{{event.campaignName}}</strong>
+                        </div>
+                        <div class="col-sm-4">
+                            {{event.comments}}
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="modal-btn" ng-click="showDetails(event,true)">
+                                More Details  +
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default modal-btn-close" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--FIN - Modal Varias Campañas -->
+</div>

@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="calawebModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="calawebEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Usuarios" EntityType="calawebModel.Usuarios" />
+    <EntitySet Name="feedback" EntityType="calawebModel.feedback" />
+    <EntitySet Name="Campaigns" EntityType="calawebModel.Campaigns" />
+    <EntitySet Name="Programs" EntityType="calawebModel.Programs" />
+    <EntitySet Name="CampaingEvents" EntityType="calawebModel.CampaingEvents" />
+    <EntitySet Name="CalendarBlitz" EntityType="calawebModel.CalendarBlitz" />
+    <EntitySet Name="View_CalendarBlitz" EntityType="calawebModel.View_CalendarBlitz" />
+    <EntitySet Name="View_CalendarAll" EntityType="calawebModel.View_CalendarAll" />
+    <EntitySet Name="RA_managers" EntityType="calawebModel.RA_managers" />
+    <EntitySet Name="ViewCampaingEvents" EntityType="calawebModel.ViewCampaingEvents" />
+  </EntityContainer>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="UsuarioId" />
+    </Key>
+    <Property Name="UsuarioId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UsuarioNombre" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="UsuarioEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="UsuarioAcceso" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UsuarioPassword" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="UsuarioNivel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UsuarioEstado" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="feedback">
+    <Key>
+      <PropertyRef Name="feedbackId" />
+    </Key>
+    <Property Name="feedbackId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="feebackNumber" Type="Int32" />
+    <Property Name="feedbackObservations" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="feedbackDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Campaigns">
+    <Key>
+      <PropertyRef Name="campaignId" />
+    </Key>
+    <Property Name="campaignId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="campaignName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Programs">
+    <Key>
+      <PropertyRef Name="programId" />
+    </Key>
+    <Property Name="programId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="programName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="programIcon" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CampaingEvents">
+    <Key>
+      <PropertyRef Name="eventId" />
+    </Key>
+    <Property Name="eventId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="campaignName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="programName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="tacticName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="tacticStage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ctaOffer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="dateStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="dateEnd" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="theater" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="subArea" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="languages" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="businessUnit" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="businessSegment" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="vertical" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="targetAudience" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sfdcCampaignName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="sfdcDashboardLink" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="promocode" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="agencyInternal" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="usuarioId" Type="Int32" />
+    <Property Name="programInitials" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="linkLibrary" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CalendarBlitz">
+    <Key>
+      <PropertyRef Name="CampBlitzId" />
+    </Key>
+    <Property Name="CampBlitzId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CampBlitzName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CampBlitzSFDCName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="CampBlitzSFDCLink" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CampBlitzDateStart" Type="DateTime" Precision="3" />
+    <Property Name="CampBlitzPartnerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CampBlitzTheater" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="CampBlitzStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CampBlitzFmm" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CampBlitzState" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="CampBlitzDateEnd" Type="DateTime" Precision="3" />
+    <Property Name="CampBlitzAgency" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="View_CalendarBlitz">
+    <Key>
+      <PropertyRef Name="CampBlitzId" />
+    </Key>
+    <Property Name="CampBlitzId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CampBlitzName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CampBlitzSFDCName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="CampBlitzSFDCLink" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CampBlitzDateStart" Type="DateTime" Precision="3" />
+    <Property Name="CampBlitzPartnerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CampBlitzTheater" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="CampBlitzStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CampBlitzFmm" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CampBlitzState" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="dateStartString" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="CampBlitzAgency" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CampBlitzDateEnd" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="View_CalendarAll">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="TypeCalendar" />
+      <PropertyRef Name="myId" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="SFDCName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="SFDCLink" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="DateStart" Type="DateTime" Precision="3" />
+    <Property Name="Theater" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TypeCalendar" Type="String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Name="myId" Type="Int32" Nullable="false" />
+    <Property Name="DateEnd" Type="DateTime" Precision="3" />
+    <Property Name="Agency" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="RA_managers">
+    <Key>
+      <PropertyRef Name="managerId" />
+    </Key>
+    <Property Name="managerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="regionId" Type="Int32" />
+    <Property Name="theaterId" Type="Int32" />
+    <Property Name="firstName" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="lastName" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="title" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="survey" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="acceptSurvey" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="accessCampaignCalendar" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ViewCampaingEvents">
+    <Key>
+      <PropertyRef Name="eventId" />
+      <PropertyRef Name="dateStart" />
+      <PropertyRef Name="dateEnd" />
+    </Key>
+    <Property Name="dateStartString" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="dateEndString" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="eventId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="campaignName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="programName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="tacticName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="tacticStage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ctaOffer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="dateStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="dateEnd" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="theater" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="subArea" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="languages" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="businessUnit" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="businessSegment" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="vertical" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="targetAudience" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sfdcCampaignName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="sfdcDashboardLink" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="promocode" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="agencyInternal" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="usuarioId" Type="Int32" />
+    <Property Name="programInitials" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="linkLibrary" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

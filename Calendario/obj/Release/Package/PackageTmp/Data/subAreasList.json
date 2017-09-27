@@ -1,0 +1,110 @@
+﻿[
+    {
+        "id": "1",
+        "name": "CENTRAL",
+        "theatre": "US"
+
+    },
+    {
+        "id": "2",
+        "name": "WEST",
+        "theatre": "US"
+
+    },
+    {
+        "id": "3",
+        "name": "EAST",
+        "theatre": "US"
+
+    },
+    {
+        "id": "32",
+        "name": "ALL",
+        "theatre": "US"
+
+    },
+    {
+        "id": "4",
+        "name": "FRENCH CANADA",
+        "theatre": "AI"
+
+    },
+    {
+        "id": "5",
+        "name": "ENGLISH CANADA",
+        "theatre": "AI"
+
+    },
+    {
+        "id": "6",
+        "name": "BRAZIL",
+        "theatre": "AI"
+
+    },
+    {
+        "id": "7",
+        "name": "LATAM",
+        "theatre": "AI"
+
+    },
+    {
+        "id": "8",
+        "name": "SPANISH CCA",
+        "theatre": "AI"
+
+    },
+    {
+        "id": "9",
+        "name": "ENGLISH CCA",
+        "theatre": "AI"
+
+    },
+    {
+        "id": "10",
+        "name": "SOUTHERN CONE",
+        "theatre": "AI"
+
+    },
+    {
+        "id": "11",
+        "name": "MEXICO",
+        "theatre": "AI"
+
+    },
+    {
+        "id": "12",
+        "name": "ANDEAN",
+        "theatre": "AI"
+
+    },
+    {
+        "id": "33",
+        "name": "ALL",
+        "theatre": "AI"
+
+    }
+    ,
+    { "id": "13", "name": "AFRICA & SOUTH AFRICA", "theatre": "EMEA" },
+    { "id": "14", "name": "INDIA & SAARC", "theatre": "EMEA" },
+    { "id": "15", "name": "TURKEY", "theatre": "EMEA" },
+    { "id": "16", "name": "EMEA ENGLISH (INDIA/SAARC/AFRICA/SOUTHAFRICA/ISRAEL)", "theatre": "EMEA" },
+    { "id": "17", "name": "RUSSIA & CIS", "theatre": "EMEA" },
+    { "id": "18", "name": "MIDDLE EAST", "theatre": "EMEA" },
+    { "id": "19", "name": "GREATER CHINA & HONG KONG", "theatre": "APAC" },
+    { "id": "34", "name": "ALL", "theatre": "EMEA" },
+    { "id": "20", "name": "ASEAN", "theatre": "APAC" },
+    { "id": "21", "name": "ANZ", "theatre": "APAC" },
+    { "id": "22", "name": "JAPAN", "theatre": "APAC" },
+    { "id": "23", "name": "KOREA", "theatre": "APAC" },
+    { "id": "35", "name": "ALL", "theatre": "APAC" },
+    { "id": "24", "name": "UK&I", "theatre": "EMEA" },
+    { "id": "25", "name": "IBERIA", "theatre": "EMEA" },
+    { "id": "26", "name": "FRANCE", "theatre": "EMEA" },
+    { "id": "27", "name": "GERMANY", "theatre": "EMEA" },
+    { "id": "28", "name": "EASTERN", "theatre": "EMEA" },
+    { "id": "29", "name": "ALPINE", "theatre": "EMEA" },
+    { "id": "30", "name": "NORDICS", "theatre": "EMEA" },
+    { "id": "31", "name": "BENELUX", "theatre": "EMEA" },
+    { "id": "36", "name": "ALL", "theatre": "EMEA" },
+    { "id": "37", "name": "ITALY", "theatre": "EMEA" }
+]

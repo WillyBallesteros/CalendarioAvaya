@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="calawebModelStoreContainer" CdmEntityContainer="calawebEntities">
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="calawebModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="UsuarioEstado" ColumnName="UsuarioEstado" />
+          <ScalarProperty Name="UsuarioNivel" ColumnName="UsuarioNivel" />
+          <ScalarProperty Name="UsuarioPassword" ColumnName="UsuarioPassword" />
+          <ScalarProperty Name="UsuarioAcceso" ColumnName="UsuarioAcceso" />
+          <ScalarProperty Name="UsuarioEmail" ColumnName="UsuarioEmail" />
+          <ScalarProperty Name="UsuarioNombre" ColumnName="UsuarioNombre" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="feedback">
+      <EntityTypeMapping TypeName="calawebModel.feedback">
+        <MappingFragment StoreEntitySet="feedback">
+          <ScalarProperty Name="feedbackDate" ColumnName="feedbackDate" />
+          <ScalarProperty Name="feedbackObservations" ColumnName="feedbackObservations" />
+          <ScalarProperty Name="feebackNumber" ColumnName="feebackNumber" />
+          <ScalarProperty Name="feedbackId" ColumnName="feedbackId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Campaigns">
+      <EntityTypeMapping TypeName="calawebModel.Campaigns">
+        <MappingFragment StoreEntitySet="Campaigns">
+          <ScalarProperty Name="campaignName" ColumnName="campaignName" />
+          <ScalarProperty Name="campaignId" ColumnName="campaignId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Programs">
+      <EntityTypeMapping TypeName="calawebModel.Programs">
+        <MappingFragment StoreEntitySet="Programs">
+          <ScalarProperty Name="programIcon" ColumnName="programIcon" />
+          <ScalarProperty Name="programName" ColumnName="programName" />
+          <ScalarProperty Name="programId" ColumnName="programId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CampaingEvents">
+      <EntityTypeMapping TypeName="calawebModel.CampaingEvents">
+        <MappingFragment StoreEntitySet="CampaingEvents">
+          <ScalarProperty Name="linkLibrary" ColumnName="linkLibrary" />
+          <ScalarProperty Name="programInitials" ColumnName="programInitials" />
+          <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
+          <ScalarProperty Name="agencyInternal" ColumnName="agencyInternal" />
+          <ScalarProperty Name="promocode" ColumnName="promocode" />
+          <ScalarProperty Name="sfdcDashboardLink" ColumnName="sfdcDashboardLink" />
+          <ScalarProperty Name="sfdcCampaignName" ColumnName="sfdcCampaignName" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="targetAudience" ColumnName="targetAudience" />
+          <ScalarProperty Name="vertical" ColumnName="vertical" />
+          <ScalarProperty Name="businessSegment" ColumnName="businessSegment" />
+          <ScalarProperty Name="businessUnit" ColumnName="businessUnit" />
+          <ScalarProperty Name="languages" ColumnName="languages" />
+          <ScalarProperty Name="subArea" ColumnName="subArea" />
+          <ScalarProperty Name="theater" ColumnName="theater" />
+          <ScalarProperty Name="dateEnd" ColumnName="dateEnd" />
+          <ScalarProperty Name="dateStart" ColumnName="dateStart" />
+          <ScalarProperty Name="ctaOffer" ColumnName="ctaOffer" />
+          <ScalarProperty Name="tacticStage" ColumnName="tacticStage" />
+          <ScalarProperty Name="tacticName" ColumnName="tacticName" />
+          <ScalarProperty Name="programName" ColumnName="programName" />
+          <ScalarProperty Name="campaignName" ColumnName="campaignName" />
+          <ScalarProperty Name="eventId" ColumnName="eventId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CalendarBlitz">
+      <EntityTypeMapping TypeName="calawebModel.CalendarBlitz">
+        <MappingFragment StoreEntitySet="CalendarBlitz">
+          <ScalarProperty Name="CampBlitzAgency" ColumnName="CampBlitzAgency" />
+          <ScalarProperty Name="CampBlitzDateEnd" ColumnName="CampBlitzDateEnd" />
+          <ScalarProperty Name="CampBlitzState" ColumnName="CampBlitzState" />
+          <ScalarProperty Name="CampBlitzFmm" ColumnName="CampBlitzFmm" />
+          <ScalarProperty Name="CampBlitzStatus" ColumnName="CampBlitzStatus" />
+          <ScalarProperty Name="CampBlitzTheater" ColumnName="CampBlitzTheater" />
+          <ScalarProperty Name="CampBlitzPartnerName" ColumnName="CampBlitzPartnerName" />
+          <ScalarProperty Name="CampBlitzDateStart" ColumnName="CampBlitzDateStart" />
+          <ScalarProperty Name="CampBlitzSFDCLink" ColumnName="CampBlitzSFDCLink" />
+          <ScalarProperty Name="CampBlitzSFDCName" ColumnName="CampBlitzSFDCName" />
+          <ScalarProperty Name="CampBlitzName" ColumnName="CampBlitzName" />
+          <ScalarProperty Name="CampBlitzId" ColumnName="CampBlitzId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_CalendarBlitz">
+      <EntityTypeMapping TypeName="calawebModel.View_CalendarBlitz">
+        <MappingFragment StoreEntitySet="View_CalendarBlitz">
+          <ScalarProperty Name="CampBlitzDateEnd" ColumnName="CampBlitzDateEnd" />
+          <ScalarProperty Name="CampBlitzAgency" ColumnName="CampBlitzAgency" />
+          <ScalarProperty Name="dateStartString" ColumnName="dateStartString" />
+          <ScalarProperty Name="CampBlitzState" ColumnName="CampBlitzState" />
+          <ScalarProperty Name="CampBlitzFmm" ColumnName="CampBlitzFmm" />
+          <ScalarProperty Name="CampBlitzStatus" ColumnName="CampBlitzStatus" />
+          <ScalarProperty Name="CampBlitzTheater" ColumnName="CampBlitzTheater" />
+          <ScalarProperty Name="CampBlitzPartnerName" ColumnName="CampBlitzPartnerName" />
+          <ScalarProperty Name="CampBlitzDateStart" ColumnName="CampBlitzDateStart" />
+          <ScalarProperty Name="CampBlitzSFDCLink" ColumnName="CampBlitzSFDCLink" />
+          <ScalarProperty Name="CampBlitzSFDCName" ColumnName="CampBlitzSFDCName" />
+          <ScalarProperty Name="CampBlitzName" ColumnName="CampBlitzName" />
+          <ScalarProperty Name="CampBlitzId" ColumnName="CampBlitzId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_CalendarAll">
+      <EntityTypeMapping TypeName="calawebModel.View_CalendarAll">
+        <MappingFragment StoreEntitySet="View_CalendarAll">
+          <ScalarProperty Name="Agency" ColumnName="Agency" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          <ScalarProperty Name="myId" ColumnName="myId" />
+          <ScalarProperty Name="TypeCalendar" ColumnName="TypeCalendar" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Theater" ColumnName="Theater" />
+          <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+          <ScalarProperty Name="SFDCLink" ColumnName="SFDCLink" />
+          <ScalarProperty Name="SFDCName" ColumnName="SFDCName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RA_managers">
+      <EntityTypeMapping TypeName="calawebModel.RA_managers">
+        <MappingFragment StoreEntitySet="RA_managers">
+          <ScalarProperty Name="accessCampaignCalendar" ColumnName="accessCampaignCalendar" />
+          <ScalarProperty Name="acceptSurvey" ColumnName="acceptSurvey" />
+          <ScalarProperty Name="survey" ColumnName="survey" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="theaterId" ColumnName="theaterId" />
+          <ScalarProperty Name="regionId" ColumnName="regionId" />
+          <ScalarProperty Name="managerId" ColumnName="managerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewCampaingEvents">
+      <EntityTypeMapping TypeName="calawebModel.ViewCampaingEvents">
+        <MappingFragment StoreEntitySet="ViewCampaingEvents">
+          <ScalarProperty Name="linkLibrary" ColumnName="linkLibrary" />
+          <ScalarProperty Name="programInitials" ColumnName="programInitials" />
+          <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
+          <ScalarProperty Name="agencyInternal" ColumnName="agencyInternal" />
+          <ScalarProperty Name="promocode" ColumnName="promocode" />
+          <ScalarProperty Name="sfdcDashboardLink" ColumnName="sfdcDashboardLink" />
+          <ScalarProperty Name="sfdcCampaignName" ColumnName="sfdcCampaignName" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="targetAudience" ColumnName="targetAudience" />
+          <ScalarProperty Name="vertical" ColumnName="vertical" />
+          <ScalarProperty Name="businessSegment" ColumnName="businessSegment" />
+          <ScalarProperty Name="businessUnit" ColumnName="businessUnit" />
+          <ScalarProperty Name="languages" ColumnName="languages" />
+          <ScalarProperty Name="subArea" ColumnName="subArea" />
+          <ScalarProperty Name="theater" ColumnName="theater" />
+          <ScalarProperty Name="dateEnd" ColumnName="dateEnd" />
+          <ScalarProperty Name="dateStart" ColumnName="dateStart" />
+          <ScalarProperty Name="ctaOffer" ColumnName="ctaOffer" />
+          <ScalarProperty Name="tacticStage" ColumnName="tacticStage" />
+          <ScalarProperty Name="tacticName" ColumnName="tacticName" />
+          <ScalarProperty Name="programName" ColumnName="programName" />
+          <ScalarProperty Name="campaignName" ColumnName="campaignName" />
+          <ScalarProperty Name="eventId" ColumnName="eventId" />
+          <ScalarProperty Name="dateEndString" ColumnName="dateEndString" />
+          <ScalarProperty Name="dateStartString" ColumnName="dateStartString" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

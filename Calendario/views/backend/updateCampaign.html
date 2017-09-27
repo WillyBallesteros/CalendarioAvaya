@@ -1,0 +1,314 @@
+﻿<!-- Content Header (Page header) -->
+<div id="addCampaignsController">
+    <section class="content-header">
+        <h1 id="titleStatus">
+            UPDATE - TACTIC/PROGRAM INFORMATION
+            <small></small>
+        </h1>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <form ng-submit="updateNewEvent()">
+                            <div class="row">
+                                <div class="col-sm-6 form-group" id="campaignNameMsg">
+                                    <label for="">CAMPAIGN</label>
+                                    <input type="text" class="form-control" id="campaignName" name="campaignName" ng-model="eventActual.campaignName" placeholder="CAMPAIGN NAME">
+                                </div>
+                                <div class="col-sm-6 form-group" id="programNameMsg">
+                                    <label for="">PROGRAM</label>
+                                    <select class="form-control" id="programName" name="programName" ng-model="eventActual.programName">
+                                        <option value="" selected="selected"></option>
+                                        <option value="Contact Me Teleprospecting">Contact Me Teleprospecting</option>
+                                        <option value="Content Promotion">Content Promotion</option>
+                                        <option value="Demand Generation">Demand Generation</option>
+                                        <option value="Event">Event</option>
+                                        <option value="Live Webinar">Live Webinar</option>
+                                        <option value="Partner Teleprospecting">Partner Teleprospecting</option>
+                                        <option value="Physical Event">Physical Event</option>
+                                        <option value="Reputation">Reputation</option>
+                                        <option value="Sales Enablement">Sales Enablement</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 form-group" id="businessUnitMsg">
+                                    <label for="">SOLUTION</label>
+                                    <select class="form-control" id="businessUnit" name="businessUnit" ng-model="eventActual.businessUnit">
+                                        <option ng-repeat="bu in businessUnitList" value="{{bu.name}}">{{bu.name}}</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6 form-group" id="businessSegmentMsg">
+                                    <label for="">BUSINESS SEGMENT</label>
+                                    <select class="form-control" id="businessSegment" name="businessSegment" ng-model="eventActual.businessSegment">
+                                        <option ng-repeat="bs in businessSegmentList" value="{{bs.name}}">{{bs.name}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 form-group" id="tacticNameMsg">
+                                    <label for="">TACTIC (Vehicle to display CTA/OFFER)</label>
+                                    <select class="form-control" id="tacticName" name="tacticName" ng-model="eventActual.tacticName">
+                                        <option ng-repeat="tl in tacticList" value="{{tl.name}}" data-icon="{{tl.icon}}">{{tl.name}}</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6 form-group" id="tacticStageMsg">
+                                    <label for="">TACTIC STAGE</label>
+                                    <select class="form-control" id="tacticStage" name="tacticStage" ng-model="eventActual.tacticStage">
+                                        <option value="" selected="selected"></option>
+                                        <option value="Awareness">Awareness</option>
+                                        <option value="Evaluation">Evaluation</option>
+                                        <option value="Research">Research</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 form-group" id="ctaOfferMsg">
+                                    <label for="">CTA/OFFER (displayed through Tactic)</label>
+                                    <select class="form-control" id="ctaOffer" name="ctaOffer" ng-model="eventActual.ctaOffer">
+                                        <option ng-repeat="col in ctaOfferList" value="{{col.name}}">{{col.name}}</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6 form-group">
+                                    &nbsp;
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 form-group" id="dateStartMsg">
+                                    <label for="">TACTIC START DATE</label>
+                                    <div class="input-group date" id="dateStartD">
+                                        <input type='text' class="form-control" id="dateStart" ng-model="eventActual.dateStartString" name="dateStart" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 form-group" id="dateEndMsg">
+                                    <label for="">TACTIC END DATE </label>
+                                    <div class="input-group date" id="dateEndD">
+                                        <input type='text' class="form-control" id="dateEnd" ng-model="eventActual.dateEndString" name="dateEnd" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6 form-group" id="sfdcCampaignNameMsg">
+                                    <label for="">SFDC CAMPAIGN NAME</label>
+                                    <input type="text" class="form-control" id="sfdcCampaignName" name="sfdcCampaignName" ng-model="eventActual.sfdcCampaignName" placeholder="SFDC CAMPAIGN NAME">
+                                </div>
+                                <div class="col-sm-6 form-group" id="sfdcDashboardLinkMsg">
+                                    <label for="">SFDC DASHBOARD LINK</label>
+                                    <input type="text" class="form-control" id="sfdcDashboardLink" name="sfdcDashboardLink" ng-model="eventActual.sfdcDashboardLink" placeholder="SFDC DASHBOARD LINK">
+                                </div>
+                            </div>
+                            <!--<div class="row">
+        <div class="col-sm-6 form-group">
+            <label for="">CAMPAIGN START DATE</label>
+            <div class="input-group date" id="campaignDateStartD">
+                <input type='text' class="form-control" id="campaignDateStart" ng-model="eventActual.campaignDateStartString" name="campaignDateStart" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+        <div class="col-sm-6 form-group">
+            <label for="">CAMPAIGN END DATE </label>
+            <div class="input-group date" id="campaignDateEndD">
+                <input type='text' class="form-control" id="campaignDateEnd" ng-model="eventActual.campaignDateEndString" name="campaignDateEnd" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>-->
+
+                            <div class="row">
+                                <div class="col-sm-6 form-group" id="promocodeMsg">
+                                    <label for="">PROMOCODE</label>
+                                    <input type="text" class="form-control" id="promocode" name="promocode" ng-model="eventActual.promocode" placeholder="PROMOCODE">
+                                </div>
+                                <div class="col-sm-6 form-group" id="targetAudienceMsg">
+                                    <label for="">TARGET AUDIENCE</label>
+                                    <select class="form-control" id="targetAudience" name="targetAudience" ng-model="eventActual.targetAudience">
+                                        <option ng-repeat="ta in targetAudienceList" value="{{ta.name}}">{{ta.name}}</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6 form-group" id="theaterMsg">
+                                    <label for="">THEATER</label>
+                                    <select class="form-control" id="theater" name="theater" ng-model="eventActual.theater">
+                                        <option ng-repeat="th in theaterList" value="{{th.name}}">{{th.name}}</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6 form-group" id="subAreaMsg">
+                                    <label for="">REGION</label>
+                                    <select class="form-control" id="subArea" name="subArea" ng-model="eventActual.subArea">
+                                        <option ng-repeat="sba in subAreasList | filter : {theatre : eventActual.theater}: true" value="{{sba.name}}">{{sba.name}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group" style="padding-left: 20px;margin-bottom: 10px;" id="verticalCh">
+                                    <label for="">VERTICAL</label>
+                                    <div ng-repeat="v in verticalsList">
+                                        <div class="clearfix" ng-if="$index % 4 == 0"></div>
+                                        <div class="col-sm-3">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" name="vertical" ng-model="vss[v.name]" value="{{v.name}}" ng-change="changeVerticals('{{v.name}}')" /> {{v.name}}</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 10px;" id="languagesCh">
+                                <label for="">LANGUAGES</label>
+                                <div ng-repeat="l in languagesList">
+                                    <div class="clearfix" ng-if="$index % 4 == 0"></div>
+                                    <div class="col-sm-3">
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" name="languages" ng-model="pss[l.name]" value="{{l.name}}" ng-change="changeLanguages('{{l.name}}')" /> {{l.name}}</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6 form-group" id="agencyInternalMsg">
+                                    <label for="" style="margin-top: 15px;">AGENCY</label>
+                                    <select type="text" class="form-control" id="agencyInternal" name="agencyInternal" ng-model="eventActual.agencyInternal">
+                                        <option value="Creative Services">Creative Services</option>
+                                        <option value="External Agency">External Agency</option>
+                                        <option value="CS & External Agency">CS & External Agency</option>
+                                        <option value="Televerde">Televerde</option>
+                                    </select>
+
+                                </div>
+                                <div class="col-sm-6 form-group" id="statusCh">
+                                    <label for="" style="margin-top: 15px;">STATUS</label>
+                                    <div class="checkbox">
+                                        <label> Published  &nbsp;&nbsp;<input type="checkbox" name="status" ng-model="eventActual.status" style="margin-left: 0 !important;" ng-true-value="publish" ng-false-value="unpublish" />&nbsp;&nbsp;</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 form-group" id="linkLibraryMsg">
+                                    <label for="" style="margin-top: 15px;">LIBRARY LINK</label>
+                                    <input type="text" class="form-control" id="linkLibrary" name="linkLibrary" ng-model="eventActual.linkLibrary" placeholder="LIBRARY LINK" />
+                                </div>
+                            </div>
+                            <div class="form-group" id="commentsMsg">
+                                <label for="">COMMENTS</label>
+                                <textarea class="form-control" rows="4" id="comments" name="comments" ng-model="eventActual.comments" style="margin-bottom: 20px;"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <button type="submit" id="createEvent" class="btn btn-danger" style="max-width: 250px;">Update tactic/program</button><br/>
+                                    <strong>** All fields are required. </strong>
+                                </div>
+                            </div>
+                        </form>
+                    </div><!-- /.box-body -->
+                </div><!-- /.box -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </section><!-- /.content -->
+
+    <div id="addProgramModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">ADD TACTIC/PROGRAM</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-tactic">
+                        <form ng-submit="addProgramSubmit()">
+                            <div class="form-group">
+                                <label class="col-sm-3" for="">TACTIC/PROGRAM NAME</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" ng-model="programName" placeholder="TACTIC/PROGRAM NAME" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3" for="">&nbsp;</label>
+                                <div class="col-sm-9">
+                                    <button type="submit" class="btn btn-danger" style="margin-top: 10px; max-width: 250px;">ADD</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default modal-btn-close" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div id="addCampaignModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">ADD CAMPAIGN</h4>
+            </div>
+            <div class="modal-body">
+                <div class="modal-tactic">
+                    <form ng-submit="addCampaignSubmit()">
+                        <div class="form-group">
+                            <label class="col-sm-3" for="">CAMPAIGN NAME</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" ng-model="campaignName" placeholder="CAMPAIGN NAME"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3" for="">&nbsp;</label>
+                            <div class="col-sm-9">
+                                <button type="submit" class="btn btn-danger" style="margin-top: 10px; max-width: 250px;">ADD</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default modal-btn-close" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">{{message.title}}</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-tactic">
+                        <strong>{{message.content}}</strong>&nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" style="max-width: 120px;" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

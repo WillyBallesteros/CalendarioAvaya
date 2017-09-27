@@ -1,0 +1,646 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="calawebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="RA_managers">
+          <Key>
+            <PropertyRef Name="managerId" />
+          </Key>
+          <Property Name="managerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="regionId" Type="int" />
+          <Property Name="theaterId" Type="int" />
+          <Property Name="firstName" Type="nvarchar" MaxLength="80" />
+          <Property Name="lastName" Type="nvarchar" MaxLength="80" />
+          <Property Name="phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="title" Type="nvarchar" MaxLength="300" />
+          <Property Name="status" Type="nvarchar" MaxLength="20" />
+          <Property Name="email" Type="nvarchar" MaxLength="150" />
+          <Property Name="usuario" Type="nvarchar" MaxLength="50" />
+          <Property Name="password" Type="nvarchar" MaxLength="250" />
+          <Property Name="survey" Type="nvarchar" MaxLength="3" />
+          <Property Name="acceptSurvey" Type="nvarchar" MaxLength="3" />
+          <Property Name="accessCampaignCalendar" Type="nvarchar" MaxLength="3" />
+        </EntityType>
+        <EntityType Name="CalendarBlitz">
+          <Key>
+            <PropertyRef Name="CampBlitzId" />
+          </Key>
+          <Property Name="CampBlitzId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CampBlitzName" Type="nvarchar" MaxLength="100" />
+          <Property Name="CampBlitzSFDCName" Type="nvarchar" MaxLength="150" />
+          <Property Name="CampBlitzSFDCLink" Type="nvarchar" MaxLength="250" />
+          <Property Name="CampBlitzDateStart" Type="datetime" />
+          <Property Name="CampBlitzPartnerName" Type="nvarchar" MaxLength="100" />
+          <Property Name="CampBlitzTheater" Type="nvarchar" MaxLength="80" />
+          <Property Name="CampBlitzStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="CampBlitzFmm" Type="nvarchar" MaxLength="100" />
+          <Property Name="CampBlitzState" Type="nvarchar" MaxLength="30" />
+          <Property Name="CampBlitzDateEnd" Type="datetime" />
+          <Property Name="CampBlitzAgency" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Campaigns">
+          <Key>
+            <PropertyRef Name="campaignId" />
+          </Key>
+          <Property Name="campaignId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="campaignName" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="CampaingEvents">
+          <Key>
+            <PropertyRef Name="eventId" />
+          </Key>
+          <Property Name="eventId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="campaignName" Type="nvarchar" MaxLength="250" />
+          <Property Name="programName" Type="nvarchar" MaxLength="250" />
+          <Property Name="tacticName" Type="nvarchar" MaxLength="100" />
+          <Property Name="tacticStage" Type="nvarchar" MaxLength="50" />
+          <Property Name="ctaOffer" Type="nvarchar" MaxLength="100" />
+          <Property Name="dateStart" Type="datetime" Nullable="false" />
+          <Property Name="dateEnd" Type="datetime" Nullable="false" />
+          <Property Name="theater" Type="nvarchar" MaxLength="100" />
+          <Property Name="subArea" Type="nvarchar" MaxLength="250" />
+          <Property Name="languages" Type="nvarchar" MaxLength="500" />
+          <Property Name="businessUnit" Type="nvarchar" MaxLength="250" />
+          <Property Name="businessSegment" Type="nvarchar" MaxLength="250" />
+          <Property Name="vertical" Type="nvarchar" MaxLength="250" />
+          <Property Name="targetAudience" Type="nvarchar" MaxLength="250" />
+          <Property Name="status" Type="nvarchar" MaxLength="15" />
+          <Property Name="comments" Type="nvarchar(max)" />
+          <Property Name="sfdcCampaignName" Type="nvarchar" MaxLength="250" />
+          <Property Name="sfdcDashboardLink" Type="nvarchar" MaxLength="250" />
+          <Property Name="promocode" Type="nvarchar" MaxLength="200" />
+          <Property Name="agencyInternal" Type="nvarchar" MaxLength="250" />
+          <Property Name="usuarioId" Type="int" />
+          <Property Name="programInitials" Type="nvarchar" MaxLength="50" />
+          <Property Name="linkLibrary" Type="nvarchar" MaxLength="350" />
+        </EntityType>
+        <EntityType Name="feedback">
+          <Key>
+            <PropertyRef Name="feedbackId" />
+          </Key>
+          <Property Name="feedbackId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="feebackNumber" Type="int" />
+          <Property Name="feedbackObservations" Type="nvarchar(max)" />
+          <Property Name="feedbackDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Programs">
+          <Key>
+            <PropertyRef Name="programId" />
+          </Key>
+          <Property Name="programId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="programName" Type="nvarchar" MaxLength="250" />
+          <Property Name="programIcon" Type="nvarchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="UsuarioId" />
+          </Key>
+          <Property Name="UsuarioId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UsuarioNombre" Type="nvarchar" MaxLength="200" />
+          <Property Name="UsuarioEmail" Type="nvarchar" MaxLength="200" />
+          <Property Name="UsuarioAcceso" Type="nvarchar" MaxLength="100" />
+          <Property Name="UsuarioPassword" Type="nvarchar" MaxLength="500" />
+          <Property Name="UsuarioNivel" Type="nvarchar" MaxLength="50" />
+          <Property Name="UsuarioEstado" Type="nvarchar" MaxLength="15" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'calaweb.Cala_Web.View_CalendarAll' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="View_CalendarAll">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="TypeCalendar" />
+            <PropertyRef Name="myId" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="SFDCName" Type="nvarchar" MaxLength="250" />
+          <Property Name="SFDCLink" Type="nvarchar" MaxLength="250" />
+          <Property Name="DateStart" Type="datetime" />
+          <Property Name="Theater" Type="nvarchar" MaxLength="100" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="TypeCalendar" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="myId" Type="int" Nullable="false" />
+          <Property Name="DateEnd" Type="datetime" />
+          <Property Name="Agency" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'calaweb.calendar.View_CalendarBlitz' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="View_CalendarBlitz">
+          <Key>
+            <PropertyRef Name="CampBlitzId" />
+          </Key>
+          <Property Name="CampBlitzId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CampBlitzName" Type="nvarchar" MaxLength="100" />
+          <Property Name="CampBlitzSFDCName" Type="nvarchar" MaxLength="150" />
+          <Property Name="CampBlitzSFDCLink" Type="nvarchar" MaxLength="250" />
+          <Property Name="CampBlitzDateStart" Type="datetime" />
+          <Property Name="CampBlitzPartnerName" Type="nvarchar" MaxLength="100" />
+          <Property Name="CampBlitzTheater" Type="nvarchar" MaxLength="80" />
+          <Property Name="CampBlitzStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="CampBlitzFmm" Type="nvarchar" MaxLength="100" />
+          <Property Name="CampBlitzState" Type="nvarchar" MaxLength="30" />
+          <Property Name="dateStartString" Type="varchar" MaxLength="11" />
+          <Property Name="CampBlitzAgency" Type="nvarchar" MaxLength="250" />
+          <Property Name="CampBlitzDateEnd" Type="datetime" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'calaweb.calendar.ViewCampaingEvents' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="ViewCampaingEvents">
+          <Key>
+            <PropertyRef Name="eventId" />
+            <PropertyRef Name="dateStart" />
+            <PropertyRef Name="dateEnd" />
+          </Key>
+          <Property Name="dateStartString" Type="varchar" MaxLength="11" />
+          <Property Name="dateEndString" Type="varchar" MaxLength="11" />
+          <Property Name="eventId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="campaignName" Type="nvarchar" MaxLength="250" />
+          <Property Name="programName" Type="nvarchar" MaxLength="250" />
+          <Property Name="tacticName" Type="nvarchar" MaxLength="100" />
+          <Property Name="tacticStage" Type="nvarchar" MaxLength="50" />
+          <Property Name="ctaOffer" Type="nvarchar" MaxLength="100" />
+          <Property Name="dateStart" Type="datetime" Nullable="false" />
+          <Property Name="dateEnd" Type="datetime" Nullable="false" />
+          <Property Name="theater" Type="nvarchar" MaxLength="100" />
+          <Property Name="subArea" Type="nvarchar" MaxLength="250" />
+          <Property Name="languages" Type="nvarchar" MaxLength="500" />
+          <Property Name="businessUnit" Type="nvarchar" MaxLength="250" />
+          <Property Name="businessSegment" Type="nvarchar" MaxLength="250" />
+          <Property Name="vertical" Type="nvarchar" MaxLength="250" />
+          <Property Name="targetAudience" Type="nvarchar" MaxLength="250" />
+          <Property Name="status" Type="nvarchar" MaxLength="15" />
+          <Property Name="comments" Type="nvarchar(max)" />
+          <Property Name="sfdcCampaignName" Type="nvarchar" MaxLength="250" />
+          <Property Name="sfdcDashboardLink" Type="nvarchar" MaxLength="250" />
+          <Property Name="promocode" Type="nvarchar" MaxLength="200" />
+          <Property Name="agencyInternal" Type="nvarchar" MaxLength="250" />
+          <Property Name="usuarioId" Type="int" />
+          <Property Name="programInitials" Type="nvarchar" MaxLength="50" />
+          <Property Name="linkLibrary" Type="nvarchar" MaxLength="350" />
+        </EntityType>
+        <EntityContainer Name="calawebModelStoreContainer">
+          <EntitySet Name="RA_managers" EntityType="Self.RA_managers" Schema="Cala_Web" store:Type="Tables" />
+          <EntitySet Name="CalendarBlitz" EntityType="Self.CalendarBlitz" Schema="calendar" store:Type="Tables" />
+          <EntitySet Name="Campaigns" EntityType="Self.Campaigns" Schema="calendar" store:Type="Tables" />
+          <EntitySet Name="CampaingEvents" EntityType="Self.CampaingEvents" Schema="calendar" store:Type="Tables" />
+          <EntitySet Name="feedback" EntityType="Self.feedback" Schema="calendar" store:Type="Tables" />
+          <EntitySet Name="Programs" EntityType="Self.Programs" Schema="calendar" store:Type="Tables" />
+          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="calendar" store:Type="Tables" />
+          <EntitySet Name="View_CalendarAll" EntityType="Self.View_CalendarAll" store:Type="Views" store:Schema="Cala_Web">
+            <DefiningQuery>SELECT 
+    [View_CalendarAll].[Id] AS [Id], 
+    [View_CalendarAll].[Name] AS [Name], 
+    [View_CalendarAll].[SFDCName] AS [SFDCName], 
+    [View_CalendarAll].[SFDCLink] AS [SFDCLink], 
+    [View_CalendarAll].[DateStart] AS [DateStart], 
+    [View_CalendarAll].[Theater] AS [Theater], 
+    [View_CalendarAll].[Status] AS [Status], 
+    [View_CalendarAll].[TypeCalendar] AS [TypeCalendar], 
+    [View_CalendarAll].[myId] AS [myId], 
+    [View_CalendarAll].[DateEnd] AS [DateEnd], 
+    [View_CalendarAll].[Agency] AS [Agency]
+    FROM [Cala_Web].[View_CalendarAll] AS [View_CalendarAll]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_CalendarBlitz" EntityType="Self.View_CalendarBlitz" store:Type="Views" store:Schema="calendar">
+            <DefiningQuery>SELECT 
+    [View_CalendarBlitz].[CampBlitzId] AS [CampBlitzId], 
+    [View_CalendarBlitz].[CampBlitzName] AS [CampBlitzName], 
+    [View_CalendarBlitz].[CampBlitzSFDCName] AS [CampBlitzSFDCName], 
+    [View_CalendarBlitz].[CampBlitzSFDCLink] AS [CampBlitzSFDCLink], 
+    [View_CalendarBlitz].[CampBlitzDateStart] AS [CampBlitzDateStart], 
+    [View_CalendarBlitz].[CampBlitzPartnerName] AS [CampBlitzPartnerName], 
+    [View_CalendarBlitz].[CampBlitzTheater] AS [CampBlitzTheater], 
+    [View_CalendarBlitz].[CampBlitzStatus] AS [CampBlitzStatus], 
+    [View_CalendarBlitz].[CampBlitzFmm] AS [CampBlitzFmm], 
+    [View_CalendarBlitz].[CampBlitzState] AS [CampBlitzState], 
+    [View_CalendarBlitz].[dateStartString] AS [dateStartString], 
+    [View_CalendarBlitz].[CampBlitzAgency] AS [CampBlitzAgency], 
+    [View_CalendarBlitz].[CampBlitzDateEnd] AS [CampBlitzDateEnd]
+    FROM [calendar].[View_CalendarBlitz] AS [View_CalendarBlitz]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ViewCampaingEvents" EntityType="Self.ViewCampaingEvents" store:Type="Views" store:Schema="calendar">
+            <DefiningQuery>SELECT 
+    [ViewCampaingEvents].[dateStartString] AS [dateStartString], 
+    [ViewCampaingEvents].[dateEndString] AS [dateEndString], 
+    [ViewCampaingEvents].[eventId] AS [eventId], 
+    [ViewCampaingEvents].[campaignName] AS [campaignName], 
+    [ViewCampaingEvents].[programName] AS [programName], 
+    [ViewCampaingEvents].[tacticName] AS [tacticName], 
+    [ViewCampaingEvents].[tacticStage] AS [tacticStage], 
+    [ViewCampaingEvents].[ctaOffer] AS [ctaOffer], 
+    [ViewCampaingEvents].[dateStart] AS [dateStart], 
+    [ViewCampaingEvents].[dateEnd] AS [dateEnd], 
+    [ViewCampaingEvents].[theater] AS [theater], 
+    [ViewCampaingEvents].[subArea] AS [subArea], 
+    [ViewCampaingEvents].[languages] AS [languages], 
+    [ViewCampaingEvents].[businessUnit] AS [businessUnit], 
+    [ViewCampaingEvents].[businessSegment] AS [businessSegment], 
+    [ViewCampaingEvents].[vertical] AS [vertical], 
+    [ViewCampaingEvents].[targetAudience] AS [targetAudience], 
+    [ViewCampaingEvents].[status] AS [status], 
+    [ViewCampaingEvents].[comments] AS [comments], 
+    [ViewCampaingEvents].[sfdcCampaignName] AS [sfdcCampaignName], 
+    [ViewCampaingEvents].[sfdcDashboardLink] AS [sfdcDashboardLink], 
+    [ViewCampaingEvents].[promocode] AS [promocode], 
+    [ViewCampaingEvents].[agencyInternal] AS [agencyInternal], 
+    [ViewCampaingEvents].[usuarioId] AS [usuarioId], 
+    [ViewCampaingEvents].[programInitials] AS [programInitials], 
+    [ViewCampaingEvents].[linkLibrary] AS [linkLibrary]
+    FROM [calendar].[ViewCampaingEvents] AS [ViewCampaingEvents]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="calawebModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="calawebEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Usuarios" EntityType="calawebModel.Usuarios" />
+          <EntitySet Name="feedback" EntityType="calawebModel.feedback" />
+          <EntitySet Name="Campaigns" EntityType="calawebModel.Campaigns" />
+          <EntitySet Name="Programs" EntityType="calawebModel.Programs" />
+          <EntitySet Name="CampaingEvents" EntityType="calawebModel.CampaingEvents" />
+          <EntitySet Name="CalendarBlitz" EntityType="calawebModel.CalendarBlitz" />
+          <EntitySet Name="View_CalendarBlitz" EntityType="calawebModel.View_CalendarBlitz" />
+          <EntitySet Name="View_CalendarAll" EntityType="calawebModel.View_CalendarAll" />
+          <EntitySet Name="RA_managers" EntityType="calawebModel.RA_managers" />
+          <EntitySet Name="ViewCampaingEvents" EntityType="calawebModel.ViewCampaingEvents" />
+        </EntityContainer>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="UsuarioId" />
+          </Key>
+          <Property Name="UsuarioId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UsuarioNombre" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="UsuarioEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="UsuarioAcceso" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UsuarioPassword" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="UsuarioNivel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UsuarioEstado" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="feedback">
+          <Key>
+            <PropertyRef Name="feedbackId" />
+          </Key>
+          <Property Name="feedbackId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="feebackNumber" Type="Int32" />
+          <Property Name="feedbackObservations" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="feedbackDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Campaigns">
+          <Key>
+            <PropertyRef Name="campaignId" />
+          </Key>
+          <Property Name="campaignId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="campaignName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Programs">
+          <Key>
+            <PropertyRef Name="programId" />
+          </Key>
+          <Property Name="programId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="programName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="programIcon" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CampaingEvents">
+          <Key>
+            <PropertyRef Name="eventId" />
+          </Key>
+          <Property Name="eventId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="campaignName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="programName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="tacticName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="tacticStage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ctaOffer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="dateStart" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="dateEnd" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="theater" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="subArea" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="languages" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="businessUnit" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="businessSegment" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="vertical" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="targetAudience" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="status" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="sfdcCampaignName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="sfdcDashboardLink" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="promocode" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="agencyInternal" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="usuarioId" Type="Int32" />
+          <Property Name="programInitials" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="linkLibrary" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CalendarBlitz">
+          <Key>
+            <PropertyRef Name="CampBlitzId" />
+          </Key>
+          <Property Name="CampBlitzId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CampBlitzName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CampBlitzSFDCName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="CampBlitzSFDCLink" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CampBlitzDateStart" Type="DateTime" Precision="3" />
+          <Property Name="CampBlitzPartnerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CampBlitzTheater" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="CampBlitzStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CampBlitzFmm" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CampBlitzState" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="CampBlitzDateEnd" Type="DateTime" Precision="3" />
+          <Property Name="CampBlitzAgency" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="View_CalendarBlitz">
+          <Key>
+            <PropertyRef Name="CampBlitzId" />
+          </Key>
+          <Property Name="CampBlitzId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CampBlitzName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CampBlitzSFDCName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="CampBlitzSFDCLink" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CampBlitzDateStart" Type="DateTime" Precision="3" />
+          <Property Name="CampBlitzPartnerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CampBlitzTheater" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="CampBlitzStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CampBlitzFmm" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CampBlitzState" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="dateStartString" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="CampBlitzAgency" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CampBlitzDateEnd" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="View_CalendarAll">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="TypeCalendar" />
+            <PropertyRef Name="myId" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="SFDCName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="SFDCLink" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="DateStart" Type="DateTime" Precision="3" />
+          <Property Name="Theater" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TypeCalendar" Type="String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="myId" Type="Int32" Nullable="false" />
+          <Property Name="DateEnd" Type="DateTime" Precision="3" />
+          <Property Name="Agency" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="RA_managers">
+          <Key>
+            <PropertyRef Name="managerId" />
+          </Key>
+          <Property Name="managerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="regionId" Type="Int32" />
+          <Property Name="theaterId" Type="Int32" />
+          <Property Name="firstName" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="lastName" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="title" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="survey" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="acceptSurvey" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="accessCampaignCalendar" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ViewCampaingEvents">
+          <Key>
+            <PropertyRef Name="eventId" />
+            <PropertyRef Name="dateStart" />
+            <PropertyRef Name="dateEnd" />
+          </Key>
+          <Property Name="dateStartString" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="dateEndString" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="eventId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="campaignName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="programName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="tacticName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="tacticStage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ctaOffer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="dateStart" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="dateEnd" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="theater" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="subArea" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="languages" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="businessUnit" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="businessSegment" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="vertical" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="targetAudience" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="status" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="sfdcCampaignName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="sfdcDashboardLink" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="promocode" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="agencyInternal" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="usuarioId" Type="Int32" />
+          <Property Name="programInitials" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="linkLibrary" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="calawebModelStoreContainer" CdmEntityContainer="calawebEntities">
+          <EntitySetMapping Name="Usuarios">
+            <EntityTypeMapping TypeName="calawebModel.Usuarios">
+              <MappingFragment StoreEntitySet="Usuarios">
+                <ScalarProperty Name="UsuarioEstado" ColumnName="UsuarioEstado" />
+                <ScalarProperty Name="UsuarioNivel" ColumnName="UsuarioNivel" />
+                <ScalarProperty Name="UsuarioPassword" ColumnName="UsuarioPassword" />
+                <ScalarProperty Name="UsuarioAcceso" ColumnName="UsuarioAcceso" />
+                <ScalarProperty Name="UsuarioEmail" ColumnName="UsuarioEmail" />
+                <ScalarProperty Name="UsuarioNombre" ColumnName="UsuarioNombre" />
+                <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="feedback">
+            <EntityTypeMapping TypeName="calawebModel.feedback">
+              <MappingFragment StoreEntitySet="feedback">
+                <ScalarProperty Name="feedbackDate" ColumnName="feedbackDate" />
+                <ScalarProperty Name="feedbackObservations" ColumnName="feedbackObservations" />
+                <ScalarProperty Name="feebackNumber" ColumnName="feebackNumber" />
+                <ScalarProperty Name="feedbackId" ColumnName="feedbackId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Campaigns">
+            <EntityTypeMapping TypeName="calawebModel.Campaigns">
+              <MappingFragment StoreEntitySet="Campaigns">
+                <ScalarProperty Name="campaignName" ColumnName="campaignName" />
+                <ScalarProperty Name="campaignId" ColumnName="campaignId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Programs">
+            <EntityTypeMapping TypeName="calawebModel.Programs">
+              <MappingFragment StoreEntitySet="Programs">
+                <ScalarProperty Name="programIcon" ColumnName="programIcon" />
+                <ScalarProperty Name="programName" ColumnName="programName" />
+                <ScalarProperty Name="programId" ColumnName="programId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CampaingEvents">
+            <EntityTypeMapping TypeName="calawebModel.CampaingEvents">
+              <MappingFragment StoreEntitySet="CampaingEvents">
+                <ScalarProperty Name="linkLibrary" ColumnName="linkLibrary" />
+                <ScalarProperty Name="programInitials" ColumnName="programInitials" />
+                <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
+                <ScalarProperty Name="agencyInternal" ColumnName="agencyInternal" />
+                <ScalarProperty Name="promocode" ColumnName="promocode" />
+                <ScalarProperty Name="sfdcDashboardLink" ColumnName="sfdcDashboardLink" />
+                <ScalarProperty Name="sfdcCampaignName" ColumnName="sfdcCampaignName" />
+                <ScalarProperty Name="comments" ColumnName="comments" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="targetAudience" ColumnName="targetAudience" />
+                <ScalarProperty Name="vertical" ColumnName="vertical" />
+                <ScalarProperty Name="businessSegment" ColumnName="businessSegment" />
+                <ScalarProperty Name="businessUnit" ColumnName="businessUnit" />
+                <ScalarProperty Name="languages" ColumnName="languages" />
+                <ScalarProperty Name="subArea" ColumnName="subArea" />
+                <ScalarProperty Name="theater" ColumnName="theater" />
+                <ScalarProperty Name="dateEnd" ColumnName="dateEnd" />
+                <ScalarProperty Name="dateStart" ColumnName="dateStart" />
+                <ScalarProperty Name="ctaOffer" ColumnName="ctaOffer" />
+                <ScalarProperty Name="tacticStage" ColumnName="tacticStage" />
+                <ScalarProperty Name="tacticName" ColumnName="tacticName" />
+                <ScalarProperty Name="programName" ColumnName="programName" />
+                <ScalarProperty Name="campaignName" ColumnName="campaignName" />
+                <ScalarProperty Name="eventId" ColumnName="eventId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CalendarBlitz">
+            <EntityTypeMapping TypeName="calawebModel.CalendarBlitz">
+              <MappingFragment StoreEntitySet="CalendarBlitz">
+                <ScalarProperty Name="CampBlitzAgency" ColumnName="CampBlitzAgency" />
+                <ScalarProperty Name="CampBlitzDateEnd" ColumnName="CampBlitzDateEnd" />
+                <ScalarProperty Name="CampBlitzState" ColumnName="CampBlitzState" />
+                <ScalarProperty Name="CampBlitzFmm" ColumnName="CampBlitzFmm" />
+                <ScalarProperty Name="CampBlitzStatus" ColumnName="CampBlitzStatus" />
+                <ScalarProperty Name="CampBlitzTheater" ColumnName="CampBlitzTheater" />
+                <ScalarProperty Name="CampBlitzPartnerName" ColumnName="CampBlitzPartnerName" />
+                <ScalarProperty Name="CampBlitzDateStart" ColumnName="CampBlitzDateStart" />
+                <ScalarProperty Name="CampBlitzSFDCLink" ColumnName="CampBlitzSFDCLink" />
+                <ScalarProperty Name="CampBlitzSFDCName" ColumnName="CampBlitzSFDCName" />
+                <ScalarProperty Name="CampBlitzName" ColumnName="CampBlitzName" />
+                <ScalarProperty Name="CampBlitzId" ColumnName="CampBlitzId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_CalendarBlitz">
+            <EntityTypeMapping TypeName="calawebModel.View_CalendarBlitz">
+              <MappingFragment StoreEntitySet="View_CalendarBlitz">
+                <ScalarProperty Name="CampBlitzDateEnd" ColumnName="CampBlitzDateEnd" />
+                <ScalarProperty Name="CampBlitzAgency" ColumnName="CampBlitzAgency" />
+                <ScalarProperty Name="dateStartString" ColumnName="dateStartString" />
+                <ScalarProperty Name="CampBlitzState" ColumnName="CampBlitzState" />
+                <ScalarProperty Name="CampBlitzFmm" ColumnName="CampBlitzFmm" />
+                <ScalarProperty Name="CampBlitzStatus" ColumnName="CampBlitzStatus" />
+                <ScalarProperty Name="CampBlitzTheater" ColumnName="CampBlitzTheater" />
+                <ScalarProperty Name="CampBlitzPartnerName" ColumnName="CampBlitzPartnerName" />
+                <ScalarProperty Name="CampBlitzDateStart" ColumnName="CampBlitzDateStart" />
+                <ScalarProperty Name="CampBlitzSFDCLink" ColumnName="CampBlitzSFDCLink" />
+                <ScalarProperty Name="CampBlitzSFDCName" ColumnName="CampBlitzSFDCName" />
+                <ScalarProperty Name="CampBlitzName" ColumnName="CampBlitzName" />
+                <ScalarProperty Name="CampBlitzId" ColumnName="CampBlitzId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_CalendarAll">
+            <EntityTypeMapping TypeName="calawebModel.View_CalendarAll">
+              <MappingFragment StoreEntitySet="View_CalendarAll">
+                <ScalarProperty Name="Agency" ColumnName="Agency" />
+                <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+                <ScalarProperty Name="myId" ColumnName="myId" />
+                <ScalarProperty Name="TypeCalendar" ColumnName="TypeCalendar" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Theater" ColumnName="Theater" />
+                <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+                <ScalarProperty Name="SFDCLink" ColumnName="SFDCLink" />
+                <ScalarProperty Name="SFDCName" ColumnName="SFDCName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RA_managers">
+            <EntityTypeMapping TypeName="calawebModel.RA_managers">
+              <MappingFragment StoreEntitySet="RA_managers">
+                <ScalarProperty Name="accessCampaignCalendar" ColumnName="accessCampaignCalendar" />
+                <ScalarProperty Name="acceptSurvey" ColumnName="acceptSurvey" />
+                <ScalarProperty Name="survey" ColumnName="survey" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="usuario" ColumnName="usuario" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="theaterId" ColumnName="theaterId" />
+                <ScalarProperty Name="regionId" ColumnName="regionId" />
+                <ScalarProperty Name="managerId" ColumnName="managerId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ViewCampaingEvents">
+            <EntityTypeMapping TypeName="calawebModel.ViewCampaingEvents">
+              <MappingFragment StoreEntitySet="ViewCampaingEvents">
+                <ScalarProperty Name="linkLibrary" ColumnName="linkLibrary" />
+                <ScalarProperty Name="programInitials" ColumnName="programInitials" />
+                <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
+                <ScalarProperty Name="agencyInternal" ColumnName="agencyInternal" />
+                <ScalarProperty Name="promocode" ColumnName="promocode" />
+                <ScalarProperty Name="sfdcDashboardLink" ColumnName="sfdcDashboardLink" />
+                <ScalarProperty Name="sfdcCampaignName" ColumnName="sfdcCampaignName" />
+                <ScalarProperty Name="comments" ColumnName="comments" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="targetAudience" ColumnName="targetAudience" />
+                <ScalarProperty Name="vertical" ColumnName="vertical" />
+                <ScalarProperty Name="businessSegment" ColumnName="businessSegment" />
+                <ScalarProperty Name="businessUnit" ColumnName="businessUnit" />
+                <ScalarProperty Name="languages" ColumnName="languages" />
+                <ScalarProperty Name="subArea" ColumnName="subArea" />
+                <ScalarProperty Name="theater" ColumnName="theater" />
+                <ScalarProperty Name="dateEnd" ColumnName="dateEnd" />
+                <ScalarProperty Name="dateStart" ColumnName="dateStart" />
+                <ScalarProperty Name="ctaOffer" ColumnName="ctaOffer" />
+                <ScalarProperty Name="tacticStage" ColumnName="tacticStage" />
+                <ScalarProperty Name="tacticName" ColumnName="tacticName" />
+                <ScalarProperty Name="programName" ColumnName="programName" />
+                <ScalarProperty Name="campaignName" ColumnName="campaignName" />
+                <ScalarProperty Name="eventId" ColumnName="eventId" />
+                <ScalarProperty Name="dateEndString" ColumnName="dateEndString" />
+                <ScalarProperty Name="dateStartString" ColumnName="dateStartString" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

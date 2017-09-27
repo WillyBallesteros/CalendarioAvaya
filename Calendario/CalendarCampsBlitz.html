@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="calendarBlitzApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Campaigns+Blitz Calendar</title>
+    <!-- Bootstrap -->
+    <link href="assetsFrontEnd/css/proxima-font.css" rel="stylesheet">
+    <link href="assetsFrontEnd/css/bootstrap.css" rel="stylesheet">
+    <link href="assetsBackEnd/bootstrap/css/bootstrap-dialog.css" rel="stylesheet" />
+    <link href="assetsBackEnd/css/bootstrap-multiselect.css" rel="stylesheet" />
+    <link href="assetsFrontEnd/css/styles.css" rel="stylesheet">
+    <link href="js/angular/angularPrint.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <link href="assetsBackEnd/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+<body id="body" ng-controller="calendarBlitzInitController">
+    <div class="container">
+        <div class="row header">
+            <div class="col-sm-12">
+                <div class="logo">
+                    <img src="assetsFrontEnd/img/avaya-logo-08.png">
+                </div>
+                <div class="feedback">
+                    <button style="max-width: 200px; float: right;margin-top:18px;" class="btn btn-default" ng-click="showFeedback()">Give us your feedback!</button>
+                </div>
+                <!--<div class="login">
+                    <h4>John Doe</h4>
+                    <p>Sign Out</p>
+                </div>
+                <div class="user-img">
+
+                </div>-->
+            </div>
+        </div>
+        <div class="row header-img-blitz">
+            <div class="col-sm-12">
+                Avaya Marketing Global Campaigns+Blitz Calendar
+                <div class="line">
+                </div>
+            </div>
+        </div>
+        <!-- Vistas AngularJs -->
+        <div ng-view></div>
+        <!-- FIN -- Vistas AngularJs -->
+        <!-- Footer -->
+        <div class="row footer">
+            <div class="col-sm-6">
+                <p>©Avaya INC, 2017</p>
+                <p>
+                    <a href="#">Terms of Use</a> - <a href="#">Privacy Statements</a>
+                </p>
+            </div>
+            <div class="col-sm-6 text-right">
+                <img src="assetsFrontEnd/img/MCS-logo.png">
+            </div>
+        </div>
+    </div>
+    <div id="feedbackModal" class="modal fade" role="dialog">
+        <!--<div class="modal-dialog modal-lg">-->
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">GIVE US YOUR FEEDBACK!</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-tactic">
+                        <form ng-submit="saveFeedback()">
+                            <div class="form-group">
+                                <label class="control-label" for="mRadio">Hoy useful is this calendar for your daily activities?</label>
+                                <p>(5 = Definitely is!  /  1 = Not useful)</p>
+                                <div id="mRadio" class="form-control">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="optradio" value="5">5
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="optradio" value="4">4
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="optradio" value="3">3
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="optradio" value="2">2
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="optradio" value="1">1
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="observations">How could we improve this calendar?</label>
+                                <textarea ng-model="observations" class="form-control" id="observations" name="observations" placeholder="" rows="3"></textarea>
+                            </div>
+                            <p>Thank you!</p>
+                            <button style="max-width: 200px;" type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="alert alert-success fade in" id="alertSuccess" ng-if="success">
+                        <strong>Thank you!</strong>  Your feedback has been submitted.
+                    </div>
+                    <button type="button" class="btn btn-default modal-btn-close" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FIN - Modal Varias Campañas -->
+    <!-- jQuery 2.1.4 -->
+    <script src="assetsBackEnd/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed
+    <script src="assetsFrontEnd/js/bootstrap.js"></script>-->
+    <script src="assetsBackEnd/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assetsBackEnd/js/funcionesComunes.js?ver=2.2"></script>
+    <script src="js/FileSaver.min.js"></script>
+    <script src="js/tableExport.min.js"></script>
+    <script src="assetsBackEnd/bootstrap/js/bootstap-dialog.js"></script>
+    <script src="js/bootstrap-multiselect.js"></script>
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/angular/angular-route.min.js"></script>
+    <script src="js/angular/angular-sanitize.min.js"></script>
+    <script src="js/angular/angularPrint.js?ver=2.3"></script>
+    <script src="js/campBlitzFront/calendarCampBlitzApp.js?ver=2.3"></script>
+    <script src="js/campBlitzFront/calendarCampBlitzModel.js?ver=2.3"></script>
+    <script src="js/campBlitzFront/calendarCampBlitzController.js?ver=2.3"></script>
+</body>
+</html>
